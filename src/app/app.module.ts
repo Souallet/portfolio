@@ -17,6 +17,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 // Partials
 import { HeaderComponent } from './partials/header/header.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
+import { FooterComponent } from './partials/footer/footer.component';
 
 // Components
 import { GithubRepositoriesComponent } from './components/github/github-repositories/github-repositories.component';
@@ -32,6 +33,7 @@ import { GithubRepositoriesComponent } from './components/github/github-reposito
     BlogComponent,
     ContactComponent,
     GithubRepositoriesComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
   providers: [],
