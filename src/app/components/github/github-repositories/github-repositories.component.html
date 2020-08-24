@@ -1,0 +1,13 @@
+<h3>Mes projets OpenSource</h3>
+
+<div *ngIf="githubProjects.length > 0">
+  <div *ngFor="let project of githubProjects">
+    <div>{{ project.name }}</div>
+    <p>{{ project.description }}</p>
+  </div>
+</div>
+
+<div *ngIf="githubProjects.length === 0 && loading === false">Aucun projet</div>
+
+<div *ngIf="loading === true">Chargement de projets</div>
+<button *ngIf="canLoadMore === true" (click)="this.loadMoreRepositories()">Charger plus de projets</button>

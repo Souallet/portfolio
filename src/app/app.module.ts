@@ -1,19 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { GraphQLModule } from './common/graphql/graphql.module';
+import { HttpClientModule } from '@angular/common/http';
+
+// Main component
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './partials/navbar/navbar.component';
-import { HeaderComponent } from './partials/header/header.component';
+
+// Pages
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
+// Partials
+import { HeaderComponent } from './partials/header/header.component';
+import { NavbarComponent } from './partials/navbar/navbar.component';
+
+// Components
+import { GithubRepositoriesComponent } from './components/github/github-repositories/github-repositories.component';
+
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeaderComponent, HomeComponent, AboutComponent, PortfolioComponent, BlogComponent, ContactComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    PortfolioComponent,
+    BlogComponent,
+    ContactComponent,
+    GithubRepositoriesComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
