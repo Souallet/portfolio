@@ -24,6 +24,7 @@ import { FooterComponent } from './partials/footer/footer.component';
 // Components
 import { GithubRepositoriesComponent } from './components/github/github-repositories/github-repositories.component';
 import { ContactFormComponent } from './components/forms/contact-form/contact-form.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ContactFormComponent } from './components/forms/contact-form/contact-fo
     GithubRepositoriesComponent,
     FooterComponent,
     ContactFormComponent,
+    TimelineComponent,
   ],
   imports: [
     BrowserModule,
