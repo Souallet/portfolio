@@ -1,13 +1,19 @@
 <h3>Mes projets OpenSource</h3>
 
-<div *ngIf="githubProjects.length > 0">
-  <div *ngFor="let project of githubProjects">
-    <div>{{ project.name }}</div>
-    <p>{{ project.description }}</p>
-  </div>
+<div *ngIf="githubProjects.length > 0" class="flex flex-wrap">
+  <ng-container *ngFor="let project of githubProjects">
+    <app-project-card
+      [project-title]="project.name"
+      [project-img]=""
+      [project-desc]="project.description"
+      class="w-1/3"
+    ></app-project-card>
+  </ng-container>
 </div>
 
 <div *ngIf="githubProjects.length === 0 && loading === false">Aucun projet</div>
 
 <div *ngIf="loading === true">Chargement de projets</div>
-<button *ngIf="canLoadMore === true" (click)="this.loadMoreRepositories()">Charger plus de projets</button>
+<button *ngIf="canLoadMore === true" (click)="this.loadMoreRepositories()">
+  Charger plus de projets
+</button>

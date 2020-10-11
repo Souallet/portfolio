@@ -26,6 +26,7 @@ import { GithubRepositoriesComponent } from './components/github/github-reposito
 import { ContactFormComponent } from './components/forms/contact-form/contact-form.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ContactFormComponent,
     TimelineComponent,
     CarouselComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,
