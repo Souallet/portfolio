@@ -1,0 +1,116 @@
+:root {
+  --header-height: 5rem;
+
+  --big-font-size: 5rem;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.section__title {
+  margin-bottom: var(--mb-5);
+}
+
+.header {
+  position: relative;
+  top: 0;
+  bottom: auto;
+}
+
+.nav__logo {
+  font-size: var(--h3-font-size);
+}
+.nav__icon,
+.nav__btns {
+  display: none;
+}
+.nav__link {
+  font-size: var(--normal-font-size);
+}
+
+.section__about {
+  /* padding: 2rem 0 4rem; */
+  row-gap: 3rem;
+}
+
+.about__speech {
+  margin-bottom: var(--mb-2);
+}
+
+.about__studies_status {
+  margin-bottom: var(--mb-1.5);
+}
+
+.cta__scroll_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cta__scroll_mouse {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 3.2rem;
+}
+
+.cta__scroll_mouse::before {
+  content: "";
+  position: absolute;
+  border-radius: 0.4rem;
+  height: 0.4rem;
+  width: 0.4rem;
+  background-color: black;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  animation: mouse-animation 2s infinite;
+}
+
+@keyframes mouse-animation {
+  from {
+    opacity: 1;
+    top: 0.7rem;
+  }
+  to {
+    opacity: 0;
+    top: 1.6rem;
+  }
+}
+
+.projects__container {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .skills__title {
+    font-weight: var(--font-semi-bold);
+    font-size: 3rem;
+    color: var(--first-color);
+    opacity: 0.2;
+    text-transform: uppercase;
+    letter-spacing: 3rem;
+  }
+
+  .skills__list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(15% - 2rem), 1fr));
+  }
+}
+
+.contact__mail {
+  font-size: var(--h2-font-size);
+}
