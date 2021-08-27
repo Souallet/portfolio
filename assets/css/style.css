@@ -209,6 +209,9 @@ img {
 }
 
 /*----- Others ----*/
+.my-icon__arrow-down {
+  background: url("../img/others/arrow-down.svg");
+}
 .my-icon__category-alt {
   background: url("../img/others/category-alt.svg");
 }
@@ -256,6 +259,7 @@ img {
 .my-icon__vsc,
 .my-icon__github,
 .my-icon__linkedin,
+.my-icon__arrow-down,
 .my-icon__category-alt,
 .my-icon__category,
 .my-icon__collection,

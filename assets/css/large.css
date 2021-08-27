@@ -17,6 +17,10 @@
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
+.section {
+  scroll-margin-top: calc(var(--header-height) + 2rem);
+}
+
 .section__title {
   margin-bottom: var(--mb-5);
 }
@@ -59,35 +63,38 @@
   align-items: center;
 }
 
-.cta__scroll_mouse {
-  position: relative;
-  border: 1px solid black;
-  border-radius: 1rem;
+.cta__scroll_arrow {
   width: 2rem;
   height: 3.2rem;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+
+  animation-name: bounce-7;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 
-.cta__scroll_mouse::before {
-  content: "";
-  position: absolute;
-  border-radius: 0.4rem;
-  height: 0.4rem;
-  width: 0.4rem;
-  background-color: black;
-  left: 50%;
-  top: 10px;
-  transform: translateX(-50%);
-  animation: mouse-animation 2s infinite;
-}
-
-@keyframes mouse-animation {
-  from {
-    opacity: 1;
-    top: 0.7rem;
+@keyframes bounce-7 {
+  0% {
+    transform: scale(1, 1) translateY(0);
   }
-  to {
-    opacity: 0;
-    top: 1.6rem;
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-30%);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7%);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
   }
 }
 
