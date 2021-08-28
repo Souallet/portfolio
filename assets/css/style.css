@@ -447,6 +447,10 @@ img {
   margin-bottom: var(--mb-1);
 }
 
+.about__description {
+  z-index: var(--z-modal);
+}
+
 .cta__scroll_container {
   display: none;
 }
