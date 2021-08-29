@@ -8,7 +8,8 @@ const header = document.getElementById("header"),
   navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navToggleIcon = document.getElementById("nav-toggle-icon"),
-  navLinks = document.querySelectorAll(".nav__link");
+  navLinks = document.querySelectorAll(".nav__link"),
+  ctaScroll = document.getElementById("cta_scroll");
 
 const hideMenu = (event) => {
   navMenu.classList.remove("nav__menu_show");
@@ -25,12 +26,13 @@ const toggleMenu = () => {
 
 navToggle.addEventListener("click", toggleMenu);
 
-navLinks.forEach((link) => {
+[...navLinks, ctaScroll].forEach((link) => {
   link.addEventListener(
     "click",
     (event) => {
       event.preventDefault();
       hideMenu();
+      header.classList.add("sticky"); // Avoid first scroll margin-top issue
       document.querySelector(link.getAttribute("href")).scrollIntoView({
         behavior: "smooth",
       });

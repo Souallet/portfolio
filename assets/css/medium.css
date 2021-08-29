@@ -24,3 +24,7 @@
 .skills__list {
   grid-template-columns: repeat(auto-fill, minmax(calc(25% - 2rem), 1fr));
 }
+
+.contact__informations {
+  flex-direction: row;
+}

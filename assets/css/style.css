@@ -35,6 +35,7 @@
   --mb-5: 5rem;
 
   --z-tooltip: 10;
+  --z-header: 15;
   --z-fixed: 100;
   --z-modal: 1000;
 }
@@ -448,7 +449,7 @@ img {
 }
 
 .about__description {
-  z-index: var(--z-modal);
+  z-index: var(--z-tooltip);
 }
 
 .cta__scroll_container {
@@ -549,10 +550,30 @@ img {
 
 /*==================== Contact ====================*/
 
+.contact__informations {
+  display: flex;
+  margin-bottom: var(--mb-0-75);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .contact__mail {
   font-size: var(--h2-font-size);
   font-weight: var(--font-medium);
-  margin-bottom: var(--mb-0-75);
+}
+
+.contact__socials {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.contact__socials > a {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  color: var(--first-color);
 }
 
 /*==================== Footer ====================*/
