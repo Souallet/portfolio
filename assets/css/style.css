@@ -202,12 +202,22 @@ img {
 }
 
 /*----- Socials ----*/
+.my-icon__freelance_republik {
+  background: url("../img/socials/freelance-republik.svg");
+}
 .my-icon__github {
   background: url("../img/socials/github.svg");
 }
 .my-icon__linkedin {
   background: url("../img/socials/linkedin.svg");
 }
+.my-icon__malt {
+  background: url("../img/socials/malt.svg");
+}
+.my-icon__twitch {
+  background: url("../img/socials/twitch.svg");
+}
+
 
 /*----- Others ----*/
 .my-icon__arrow-down {
