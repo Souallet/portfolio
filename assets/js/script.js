@@ -9,7 +9,8 @@ const header = document.getElementById("header"),
   navToggle = document.getElementById("nav-toggle"),
   navToggleIcon = document.getElementById("nav-toggle-icon"),
   navLinks = document.querySelectorAll(".nav__link"),
-  ctaScroll = document.getElementById("cta_scroll");
+  ctaScroll = document.getElementById("cta_scroll"),
+  scrollToTop = document.getElementById("scroll-to-top");
 
 const hideMenu = (event) => {
   navMenu.classList.remove("nav__menu_show");
@@ -26,7 +27,7 @@ const toggleMenu = () => {
 
 navToggle.addEventListener("click", toggleMenu);
 
-[...navLinks, ctaScroll].forEach((link) => {
+[...navLinks, ctaScroll, scrollToTop].forEach((link) => {
   link.addEventListener(
     "click",
     (event) => {

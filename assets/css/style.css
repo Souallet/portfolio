@@ -618,3 +618,37 @@ img {
   margin: 0 10px;
   pointer-events: none;
 }
+
+.scroll_to_top_container {
+  display: flex;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10%;
+  rotate: 180deg;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--body-color);
+
+}
+
+.scroll_to_top_arrow {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.scroll_to_top_arrow::after {
+  content: '';
+  position: absolute;
+  opacity: .5;
+  top: -4px;
+  left: -5px;
+  background-color: var(--first-color);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 50%;
+  z-index: -1;
+}
