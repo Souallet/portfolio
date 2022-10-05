@@ -58,3 +58,15 @@
 .contact__informations {
   flex-direction: row;
 }
+
+
+/*==================== Footer ====================*/
+.footer {
+  flex-direction: row;
+  gap: 0;
+}
+
+.footer__made_with {
+  position: relative;
+  top: -5px;
+}
