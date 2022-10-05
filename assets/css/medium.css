@@ -1,3 +1,33 @@
+.nav__link:hover {
+  color: var(--text-color);
+}
+
+.nav__link--text {
+  position: relative;
+  width: auto; 
+}
+
+.nav__link--text:after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: 5px;
+  top: 40%;
+  height: 70%;
+  width: calc(100% + 10px);
+  opacity: 0.5;
+  background-image: linear-gradient(var(--first-color),  var(--first-color));
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s;
+  z-index: -1;
+}
+
+.nav__link--text:hover:after {
+  background-size: 100% 100%;
+}
+
 .projects__container {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
