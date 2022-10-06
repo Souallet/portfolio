@@ -124,22 +124,29 @@ img {
   text-align: left;
 }
 
-.highlight {
+.highlight,
+.highlight__low {
   position: relative;
 }
 
-.highlight::after {
+.highlight::after,
+.highlight__low::after {
   content: "";
   position: absolute;
   background-color: var(--first-color);
-  opacity: 1;
-
   height: 40%;
   left: -2px;
   top: 50%;
-  width: calc(100% + 4%);
-  /* width: max-content; */
+  width: calc(100% + 4px);
   z-index: -1;
+}
+
+.highlight::after {
+  opacity: 1;
+}
+
+.highlight__low::after {
+  opacity: 0.5;
 }
 
 /*==================== ICONS ====================*/
@@ -218,7 +225,6 @@ img {
   background: url("../img/socials/twitch.svg");
 }
 
-
 /*----- Others ----*/
 .my-icon__arrow-down {
   background: url("../img/others/arrow-down.svg");
@@ -274,8 +280,11 @@ img {
 .my-icon__sass,
 .my-icon__typescript,
 .my-icon__vsc,
+.my-icon__freelance_republik,
 .my-icon__github,
 .my-icon__linkedin,
+.my-icon__malt,
+.my-icon__twitch,
 .my-icon__arrow-down,
 .my-icon__category-alt,
 .my-icon__category,
@@ -421,6 +430,10 @@ img {
 
 .about__title {
   font-size: var(--h1-font-size);
+}
+
+.about__description {
+  font-size: 1.1rem;
 }
 
 .about__hand {
@@ -641,7 +654,6 @@ img {
   flex-direction: row;
   align-items: center;
   background-color: var(--body-color);
-
 }
 
 .scroll_to_top_arrow {
@@ -651,9 +663,9 @@ img {
 }
 
 .scroll_to_top_arrow::after {
-  content: '';
+  content: "";
   position: absolute;
-  opacity: .5;
+  opacity: 0.5;
   top: -4px;
   left: -5px;
   background-color: var(--first-color);
