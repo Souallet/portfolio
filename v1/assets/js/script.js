@@ -4,38 +4,38 @@
  * -----------------------
  */
 
-const header = document.getElementById("header"),
-  navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navToggleIcon = document.getElementById("nav-toggle-icon"),
-  navLinks = document.querySelectorAll(".nav__link"),
-  ctaScroll = document.getElementById("cta_scroll"),
-  scrollToTop = document.getElementById("scroll-to-top");
+const header = document.getElementById('header'),
+  navMenu = document.getElementById('nav-menu'),
+  navToggle = document.getElementById('nav-toggle'),
+  navToggleIcon = document.getElementById('nav-toggle-icon'),
+  navLinks = document.querySelectorAll('.nav__link'),
+  ctaScroll = document.getElementById('cta_scroll'),
+  scrollToTop = document.getElementById('scroll-to-top');
 
 const hideMenu = (event) => {
-  navMenu.classList.remove("nav__menu_show");
-  navToggleIcon.classList.add("my-icon__category");
-  navToggleIcon.classList.remove("my-icon__category-alt");
+  navMenu.classList.remove('nav__menu_show');
+  navToggleIcon.classList.add('my-icon__category');
+  navToggleIcon.classList.remove('my-icon__category-alt');
   navToggle.hidden = false;
 };
 
 const toggleMenu = () => {
-  navMenu.classList.toggle("nav__menu_show");
-  navToggleIcon.classList.toggle("my-icon__category");
-  navToggleIcon.classList.toggle("my-icon__category-alt");
+  navMenu.classList.toggle('nav__menu_show');
+  navToggleIcon.classList.toggle('my-icon__category');
+  navToggleIcon.classList.toggle('my-icon__category-alt');
 };
 
-navToggle.addEventListener("click", toggleMenu);
+navToggle.addEventListener('click', toggleMenu);
 
 [...navLinks, ctaScroll, scrollToTop].forEach((link) => {
   link.addEventListener(
-    "click",
+    'click',
     (event) => {
       event.preventDefault();
       hideMenu();
-      header.classList.add("sticky"); // Avoid first scroll margin-top issue
-      document.querySelector(link.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
+      header.classList.add('sticky'); // Avoid first scroll margin-top issue
+      document.querySelector(link.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
       });
     },
     { passive: false }
@@ -48,8 +48,8 @@ if (window.screen.width >= 480) {
     var sticky = header.offsetTop;
 
     window.pageYOffset >= sticky + 100
-      ? header.classList.add("sticky")
-      : header.classList.remove("sticky");
+      ? header.classList.add('sticky')
+      : header.classList.remove('sticky');
   };
 }
 

@@ -11,7 +11,7 @@
   --body-color: #fff;
   --container-color: ;
 
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Poppins', sans-serif;
 
   --big-font-size: 2rem;
   --h1-font-size: 2rem;
@@ -131,7 +131,7 @@ img {
 
 .highlight::after,
 .highlight__low::after {
-  content: "";
+  content: '';
   position: absolute;
   background-color: var(--first-color);
   height: 40%;
@@ -157,110 +157,110 @@ img {
 
 /*----- Programming ----*/
 .my-icon__angular {
-  background: url("../img/programming/angular.svg");
+  background: url('../img/programming/angular.svg');
 }
 .my-icon__css {
-  background: url("../img/programming/css.svg");
+  background: url('../img/programming/css.svg');
 }
 .my-icon__docker {
-  background: url("../img/programming/docker.svg");
+  background: url('../img/programming/docker.svg');
 }
 .my-icon__express {
-  background: url("../img/programming/express.svg");
+  background: url('../img/programming/express.svg');
 }
 .my-icon__git {
-  background: url("../img/programming/git.svg");
+  background: url('../img/programming/git.svg');
 }
 .my-icon__html {
-  background: url("../img/programming/html.svg");
+  background: url('../img/programming/html.svg');
 }
 .my-icon__javascript {
-  background: url("../img/programming/javascript.svg");
+  background: url('../img/programming/javascript.svg');
 }
 .my-icon__mongodb {
-  background: url("../img/programming/mongodb.svg");
+  background: url('../img/programming/mongodb.svg');
 }
 .my-icon__mysql {
-  background: url("../img/programming/mysql.svg");
+  background: url('../img/programming/mysql.svg');
 }
 .my-icon__nestjs {
-  background: url("../img/programming/nestjs.svg");
+  background: url('../img/programming/nestjs.svg');
 }
 .my-icon__netlify {
-  background: url("../img/programming/netlify.svg");
+  background: url('../img/programming/netlify.svg');
 }
 .my-icon__nodejs {
-  background: url("../img/programming/nodejs.svg");
+  background: url('../img/programming/nodejs.svg');
 }
 .my-icon__php {
-  background: url("../img/programming/php.svg");
+  background: url('../img/programming/php.svg');
 }
 .my-icon__react {
-  background: url("../img/programming/react.svg");
+  background: url('../img/programming/react.svg');
 }
 .my-icon__sass {
-  background: url("../img/programming/sass.svg");
+  background: url('../img/programming/sass.svg');
 }
 .my-icon__typescript {
-  background: url("../img/programming/typescript.svg");
+  background: url('../img/programming/typescript.svg');
 }
 .my-icon__vsc {
-  background: url("../img/programming/vsc.svg");
+  background: url('../img/programming/vsc.svg');
 }
 
 /*----- Socials ----*/
 .my-icon__freelance_republik {
-  background: url("../img/socials/freelance-republik.svg");
+  background: url('../img/socials/freelance-republik.svg');
 }
 .my-icon__github {
-  background: url("../img/socials/github.svg");
+  background: url('../img/socials/github.svg');
 }
 .my-icon__linkedin {
-  background: url("../img/socials/linkedin.svg");
+  background: url('../img/socials/linkedin.svg');
 }
 .my-icon__malt {
-  background: url("../img/socials/malt.svg");
+  background: url('../img/socials/malt.svg');
 }
 .my-icon__twitch {
-  background: url("../img/socials/twitch.svg");
+  background: url('../img/socials/twitch.svg');
 }
 
 /*----- Others ----*/
 .my-icon__arrow-down {
-  background: url("../img/others/arrow-down.svg");
+  background: url('../img/others/arrow-down.svg');
 }
 .my-icon__category-alt {
-  background: url("../img/others/category-alt.svg");
+  background: url('../img/others/category-alt.svg');
 }
 .my-icon__category {
-  background: url("../img/others/category.svg");
+  background: url('../img/others/category.svg');
 }
 .my-icon__code {
-  background: url("../img/others/code.svg");
+  background: url('../img/others/code.svg');
 }
 .my-icon__collection {
-  background: url("../img/others/collection.svg");
+  background: url('../img/others/collection.svg');
 }
 .my-icon__heart {
-  background: url("../img/others/heart.svg");
+  background: url('../img/others/heart.svg');
 }
 .my-icon__landscape {
-  background: url("../img/others/landscape.svg");
+  background: url('../img/others/landscape.svg');
 }
 .my-icon__layer {
-  background: url("../img/others/layer.svg");
+  background: url('../img/others/layer.svg');
 }
 .my-icon__mail {
-  background: url("../img/others/mail.svg");
+  background: url('../img/others/mail.svg');
 }
 .my-icon__news {
-  background: url("../img/others/news.svg");
+  background: url('../img/others/news.svg');
 }
 .my-icon__show {
-  background: url("../img/others/show.svg");
+  background: url('../img/others/show.svg');
 }
 .my-icon__user {
-  background: url("../img/others/user.svg");
+  background: url('../img/others/user.svg');
 }
 
 .my-icon__angular,
@@ -637,7 +637,7 @@ img {
 }
 
 .footer__links .footer__links--item:not(:last-child):after {
-  content: "/";
+  content: '/';
   margin: 0 10px;
   pointer-events: none;
 }
@@ -663,7 +663,7 @@ img {
 }
 
 .scroll_to_top_arrow::after {
-  content: "";
+  content: '';
   position: absolute;
   opacity: 0.5;
   top: -4px;
