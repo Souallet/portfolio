@@ -1,7 +1,19 @@
+import ContactSection from '@/components/sections/Home/Contact';
+import EducationsSection from '@/components/sections/Home/Educations';
+import ExperiencesSection from '@/components/sections/Home/Experiences';
+import HeroSection from '@/components/sections/Home/Hero';
+import SkillsSection from '@/components/sections/Home/Skills';
+import WorksSection from '@/components/sections/Home/Works';
+
 export default function Home() {
   return (
     <main className="container mx-auto">
-      <h1 className="">Titre de la page</h1>
+      <HeroSection />
+      <ExperiencesSection />
+      <EducationsSection />
+      <SkillsSection />
+      <WorksSection />
+      <ContactSection />
     </main>
   );
 }

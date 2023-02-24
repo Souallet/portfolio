@@ -1,3 +1,5 @@
+import Footer from '@/components/partials/Footer';
+import Header from '@/components/partials/Header';
 import { Inter } from 'next/font/google';
 import React from 'react';
 import './globals.css';
@@ -16,7 +18,11 @@ interface TProps {
 export default function RootLayout({ children }: TProps) {
   return (
     <html lang="fr">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
