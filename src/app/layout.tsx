@@ -1,3 +1,4 @@
+import Providers from '@/app/Providers';
 import Footer from '@/components/partials/Footer';
 import Header from '@/components/partials/Header';
 import { Inter } from 'next/font/google';
@@ -18,10 +19,14 @@ interface TProps {
 export default function RootLayout({ children }: TProps) {
   return (
     <html lang="fr">
-      <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+      <body
+        className={`${inter.className} antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900`}
+      >
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
