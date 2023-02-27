@@ -85,13 +85,13 @@ export default function Footer() {
   };
 
   return (
-    <footer>
+    <footer className="mb-8">
       <div className="mt-10 text-center flex flex-col items-center">
         <div className="flex flex-col items-center justify-between">
           <div className="flex flex-col md:flex-row items-center">
             {renderNav()}
           </div>
-          <ul className="bg-gray-100 dark:bg-slate-800 flex items-center justify-center py-1 px-2 rounded-3xl shadow-sm mt-5">
+          <ul className="bg-gray-100 dark:bg-slate-800 flex items-center justify-center py-1 px-2 rounded-3xl shadow-sm mt-8">
             {renderSocials()}
           </ul>
         </div>
