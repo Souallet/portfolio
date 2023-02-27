@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <main className="container mx-auto">
       <HeroSection />
-      <ExperiencesSection />
+      <WorksSection />
       <EducationsSection />
       <SkillsSection />
-      <WorksSection />
+      <ExperiencesSection />
       <ContactSection />
     </main>
   );
