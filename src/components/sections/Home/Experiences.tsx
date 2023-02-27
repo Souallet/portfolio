@@ -30,7 +30,7 @@ export default function ExperiencesSection() {
     return companies.map((c, i) => (
       <Image
         key={i}
-        className="grayscale hover:grayscale-0 transition duration-300 ease-in-out "
+        className="max-h-12 w-auto"
         src={c.logo}
         alt={`Logo ${c.name}`}
       />
@@ -40,7 +40,7 @@ export default function ExperiencesSection() {
   return (
     <section className="my-16 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
-      <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 items-center">
+      <div className="flex flex-wrap gap-12 justify-evenly items-end">
         {renderCompanies()}
       </div>
     </section>

@@ -9,10 +9,10 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'Sébastien OUALLET - Portfolio',
-  description: 'Développeur Web Freelance Fullstack.',
-};
+// export const metadata = {
+//   title: 'Sébastien OUALLET - Portfolio',
+//   description: 'Développeur Web Freelance Fullstack.',
+// };
 
 interface TProps {
   children: React.ReactNode;
