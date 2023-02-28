@@ -10,11 +10,12 @@ import Card from '../templates/Card';
 
 type Props = {
   work: Work;
+  className?: string;
 };
 
-export default function WorkItem({ work }: Props) {
+export default function WorkItem({ work, className = '' }: Props) {
   return (
-    <Card className="flex flex-col">
+    <Card className={`flex flex-col ${className}`}>
       <Image
         src={work.image}
         alt={`Illustration of ${work.name}`}

@@ -1,10 +1,11 @@
+import Card from '@/components/templates/Card';
 import SectionTitle from '@/components/templates/SectionTitle';
 import Image from 'next/image';
 
-import CadicServicesLogo from '../../../../public/images/cadic_logo.png';
-import DisneylandParisLogo from '../../../../public/images/disneyland_paris_logo.png';
-import LeboncoinLogo from '../../../../public/images/leboncoin_logo.png';
-import OpenclassRoomsLogo from '../../../../public/images/openclassrooms_logo.png';
+import CadicServicesLogo from '@/images/companies/cadic_logo.png';
+import DisneylandParisLogo from '@/images/companies/disneyland_paris_logo.png';
+import LeboncoinLogo from '@/images/companies/leboncoin_logo.png';
+import OpenclassRoomsLogo from '@/images/companies/openclassrooms_logo.png';
 
 const companies = [
   {
@@ -30,7 +31,7 @@ export default function ExperiencesSection() {
     return companies.map((c, i) => (
       <Image
         key={i}
-        className="max-h-12 w-auto"
+        className=" sm:h-10 sm:w-auto"
         src={c.logo}
         alt={`Logo ${c.name}`}
       />
@@ -40,9 +41,11 @@ export default function ExperiencesSection() {
   return (
     <section className="my-16 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
-      <div className="flex flex-wrap gap-12 justify-evenly items-end">
-        {renderCompanies()}
-      </div>
+      <Card className="p-6 md:px-8">
+        <div className="flex flex-wrap gap-12 justify-evenly items-center">
+          {renderCompanies()}
+        </div>
+      </Card>
     </section>
   );
 }
