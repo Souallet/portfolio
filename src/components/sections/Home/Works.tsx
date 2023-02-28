@@ -41,13 +41,15 @@ const works: Work[] = [
 
 export default function WorksSection() {
   const renderWorks = (): React.ReactNode => {
-    return works.map((w, i) => <WorkItem key={i} work={w} />);
+    return works.map((w, i) => (
+      <WorkItem key={i} work={w} className="w-full sm:w-[45%] md:w-[30%]" />
+    ));
   };
 
   return (
     <section className="my-16 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Quelques projets`}</SectionTitle>
-      <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4   items-center">
+      <div className="flex flex-wrap justify-center items-center sm:gap-x-[10%] md:gap-x-[5%]  gap-y-10">
         {renderWorks()}
       </div>
     </section>

@@ -1,3 +1,4 @@
+import Card from '@/components/templates/Card';
 import SectionTitle from '@/components/templates/SectionTitle';
 import Image from 'next/image';
 
@@ -28,21 +29,18 @@ const companies = [
 export default function ExperiencesSection() {
   const renderCompanies = (): React.ReactNode => {
     return companies.map((c, i) => (
-      <Image
-        key={i}
-        className="grayscale hover:grayscale-0 transition duration-300 ease-in-out "
-        src={c.logo}
-        alt={`Logo ${c.name}`}
-      />
+      <Image key={i} className="" src={c.logo} alt={`Logo ${c.name}`} />
     ));
   };
 
   return (
     <section className="my-16 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
-      <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 items-center">
-        {renderCompanies()}
-      </div>
+      <Card className="p-6 md:px-8">
+        <div className="grid gap-6 md:gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 items-end">
+          {renderCompanies()}
+        </div>
+      </Card>
     </section>
   );
 }
