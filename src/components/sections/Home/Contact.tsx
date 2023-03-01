@@ -2,7 +2,7 @@ import SectionTitle from '@/components/templates/SectionTitle';
 
 export default function ContactSection() {
   return (
-    <section className="mb-10 p-5 flex flex-col items-center text-center">
+    <section className="my-32 px-8 md:px-12 lg:px-16 flex flex-col items-center text-center">
       <SectionTitle>{`Restons en contact`}</SectionTitle>
       <p className="mb-8 opacity-50 text-lg md:text-md lg:text-xl xl:text-2xl">
         {`Une idée en tête ? Parlons en !`}

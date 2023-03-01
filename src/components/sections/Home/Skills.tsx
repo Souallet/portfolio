@@ -122,7 +122,7 @@ export default function SkillsSection(): React.ReactNode {
   });
 
   return (
-    <section className="my-16 px-8 md:px-12 lg:px-16">
+    <section className="my-32 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Compétences`}</SectionTitle>
       <Tab.Group>
         <Tab.List className="flex space-x-1 p-1 justify-center w-full text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">

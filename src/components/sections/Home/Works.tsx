@@ -47,7 +47,7 @@ export default function WorksSection() {
   };
 
   return (
-    <section className="my-16 px-8 md:px-12 lg:px-16">
+    <section className="my-32 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Quelques projets`}</SectionTitle>
       <div className="flex flex-wrap justify-center items-center sm:gap-x-[10%] md:gap-x-[5%]  gap-y-10">
         {renderWorks()}

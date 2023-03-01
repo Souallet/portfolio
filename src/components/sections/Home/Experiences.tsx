@@ -39,7 +39,7 @@ export default function ExperiencesSection() {
   };
 
   return (
-    <section className="my-16 px-8 md:px-12 lg:px-16">
+    <section className="my-32 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
       <Card className="p-6 md:px-8">
         <div className="flex flex-wrap gap-12 justify-evenly items-center">

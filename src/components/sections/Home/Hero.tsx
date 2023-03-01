@@ -2,7 +2,7 @@ import MainTitle from '@/components/templates/MainTitle';
 
 export default function HeroSection() {
   return (
-    <div className="relative max-w-4xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+    <section className="relative max-w-4xl mx-auto pt-20 sm:pt-24 lg:pt-32">
       <MainTitle>{`Salut ! Moi, c'est Sébastien.`}</MainTitle>
       <p className="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
         {`Développeur FullStack, je réalise des applications web et mobile avec des technologies adaptées aux besoins techniques et fonctionnels afin de rendre l'expérience utilisateur optimale.`}
@@ -15,6 +15,6 @@ export default function HeroSection() {
           Contactez-moi !
         </a>
       </div>
-    </div>
+    </section>
   );
 }
