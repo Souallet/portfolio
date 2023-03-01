@@ -22,6 +22,7 @@ import MongoDBIcon from '@/images/programming/mongodb.svg';
 import MySqlIcon from '@/images/programming/mysql.svg';
 import NodejsIcon from '@/images/programming/nodejs.svg';
 import PhpIcon from '@/images/programming/php.svg';
+import SymfonyIcon from '@/images/programming/symfony.svg';
 
 import DockerIcon from '@/images/programming/docker.svg';
 import GitIcon from '@/images/programming/git.svg';
@@ -66,10 +67,6 @@ export default function SkillsSection(): React.ReactNode {
         image: NextIcon,
       },
       {
-        name: 'React Native',
-        image: ReactIcon,
-      },
-      {
         name: 'Sass',
         image: SassIcon,
       },
@@ -81,7 +78,7 @@ export default function SkillsSection(): React.ReactNode {
       },
       {
         name: 'Symfony',
-        image: '',
+        image: SymfonyIcon,
       },
       {
         name: 'NodeJS',
@@ -131,7 +128,7 @@ export default function SkillsSection(): React.ReactNode {
               key={category}
               className={({ selected }) =>
                 classNames(
-                  'inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300',
+                  'inline-block p-4 border-b-2 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300',
                   selected
                     ? 'text-blue-600 border-blue-600 dark:text-blue-500 dark:border-blue-500'
                     : 'border-transparent hover:border-gray-300 dark:hover:text-gray-300'
@@ -146,25 +143,21 @@ export default function SkillsSection(): React.ReactNode {
           {Object.values(categories).map((technologies, idx) => (
             <Tab.Panel
               key={idx}
-              className={
-                classNames()
-                // 'rounded-xl bg-white p-3',
-                // 'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none'
-              }
+              className="ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none"
             >
-              <Card className="flex justify-center items-center py-4">
-                <ul className="flex flex-row flex-wrap justify-center items-center gap-4">
-                  {technologies.map((t) => (
-                    <li key={t.name} className="relative rounded-md p-3">
+              <ul className="flex flex-row flex-wrap justify-center items-center gap-4 py-4">
+                {technologies.map((t) => (
+                  <li key={t.name} className="relative rounded-md">
+                    <Card className="flex justify-center items-center h-24 w-24 p-4">
                       <Image
                         src={t.image}
                         alt={`Logo ${t.name}`}
-                        className="w-12"
+                        className=""
                       />
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+                    </Card>
+                  </li>
+                ))}
+              </ul>
             </Tab.Panel>
           ))}
         </Tab.Panels>
