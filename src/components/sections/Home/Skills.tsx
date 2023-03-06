@@ -27,10 +27,7 @@ import {
   Typescript,
   VSCode,
 } from '@/images/programming';
-
-function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(' ');
-}
+import { classNames } from '@/utils/styles';
 
 export default function SkillsSection() {
   let [categories] = useState({

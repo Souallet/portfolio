@@ -1,12 +1,11 @@
 import GithubIcon from '@/components/icons/GithubIcon';
 import Card from '@/components/templates/Card';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
+import { getSocialPath } from '@/utils/socials';
+import { classNames } from '@/utils/styles';
 import { Menu, Transition } from '@headlessui/react';
 import Link from 'next/link';
 import { Fragment } from 'react';
-function classNames(...classes: string[]): string {
-  return classes.filter(Boolean).join(' ');
-}
 
 const navigation = [
   {
@@ -126,7 +125,7 @@ const MobileMenu = () => {
                       />
                     </div>
                     <Link
-                      href="https://www.github.com/SOuallet"
+                      href={getSocialPath('Github')?.name ?? '/'}
                       className="flex flex-1 items-center gap-2 rounded-md border p-2 cursor-pointer"
                       target="_blank"
                     >
@@ -153,7 +152,11 @@ const ActionButtons = ({ mobile }: { mobile: boolean }) => {
     >
       <ThemeSwitcher />
 
-      <Link href="https://www.github.com/SOuallet" className="" target="_blank">
+      <Link
+        href={getSocialPath('Github')?.name ?? '/'}
+        className=""
+        target="_blank"
+      >
         <GithubIcon />
       </Link>
     </div>

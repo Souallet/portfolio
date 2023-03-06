@@ -1,11 +1,4 @@
-import {
-  GithubIcon,
-  GmailIcon,
-  LinkedinIcon,
-  MaltIcon,
-  TwitchIcon,
-  YoutubeIcon,
-} from '@/components/icons';
+import { socials } from '@/data/socials';
 
 const links = [
   {
@@ -30,39 +23,6 @@ const links = [
   },
 ];
 
-const socials = [
-  {
-    label: 'Github',
-    link: '',
-    icon: GithubIcon,
-  },
-  {
-    label: 'Gmail',
-    link: '',
-    icon: GmailIcon,
-  },
-  {
-    label: 'Youtube',
-    link: '',
-    icon: YoutubeIcon,
-  },
-  {
-    label: 'Twitch',
-    link: '',
-    icon: TwitchIcon,
-  },
-  {
-    label: 'Malt',
-    link: '',
-    icon: MaltIcon,
-  },
-  {
-    label: 'Linkedin',
-    link: '',
-    icon: LinkedinIcon,
-  },
-];
-
 export default function Footer() {
   const renderNav = () => {
     return links.map((l, i) => (
@@ -78,7 +38,7 @@ export default function Footer() {
 
   const renderSocials = () => {
     return socials.map((s, i) => (
-      <a key={i} className="p-2" target="_blank" href={s.link}>
+      <a key={i} className="p-2" target="_blank" href={s.path}>
         <s.icon className="h-6 w-6" />
       </a>
     ));
