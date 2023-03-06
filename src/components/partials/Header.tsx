@@ -37,9 +37,9 @@ export default function Header() {
         <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
           <Link
             href="/"
-            className="flex items-center space-x-2 text-2xl font-medium dark:text-gray-300 "
+            className="flex items-center space-x-2 text-xl font-medium transition-all text-slate-900 focus-visible:ring-1 focus:outline-none hover:font-bold hover:tracking-wide dark:text-gray-300 dark:hover:text-white"
           >
-            SOuallet
+            sébastien.ouallet
           </Link>
           <div className="lg:hidden">
             <MobileMenu />
@@ -50,7 +50,7 @@ export default function Header() {
           <ul className="items-center justify-end flex-1 pt-6 lg:pt-0 list-reset lg:flex">
             <NavItems navigation={navigation} mobile={false} />
           </ul>
-          <ActionButtons mobile={false} />
+          <ActionButtons />
         </div>
       </nav>
     </header>
@@ -142,19 +142,14 @@ const MobileMenu = () => {
   );
 };
 
-const ActionButtons = ({ mobile }: { mobile: boolean }) => {
+const ActionButtons = () => {
   return (
-    <div
-      className={classNames(
-        mobile ? 'flex gap-3 mt-2' : 'hidden mx-3 gap-3 lg:flex',
-        'items-center'
-      )}
-    >
+    <div className="mx-4 gap-3 flex items-center">
       <ThemeSwitcher />
 
       <Link
         href={getSocialPath('Github')?.name ?? '/'}
-        className=""
+        className="hover:text-slate-900 dark:hover:text-white dark:text-gray-300 "
         target="_blank"
       >
         <GithubIcon />
@@ -179,7 +174,7 @@ const NavItems = ({
         <Link
           href={item?.path ? item.path : '#'}
           className={classNames(
-            'outline-none transition-all focus-visible:ring-1 focus:outline-none dark:text-gray-300 flex justify-end',
+            'flex justify-end  outline-none transition-all focus-visible:ring-1 focus:outline-none hover:font-bold hover:text-slate-900 dark:text-gray-300 dark:hover:text-white',
             mobile ? 'w-full block px-4 py-2 -ml-4' : 'inline-block px-4 py-2'
           )}
           key={index}

@@ -104,7 +104,10 @@ export default function ThemeSwitcher({
     <Listbox value={selected} onChange={selectTheme}>
       <div className="relative">
         <Listbox.Button className="flex items-center">
-          <selected.icon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+          <selected.icon
+            className="h-5 w-5 dark:text-gray-300 dark:hover:text-white hover:text-slate-900"
+            aria-hidden="true"
+          />
         </Listbox.Button>
         <Transition
           as={Fragment}
