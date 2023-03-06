@@ -122,7 +122,7 @@ export default function SkillsSection() {
     <section className="my-32 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Compétences`}</SectionTitle>
       <Tab.Group>
-        <Tab.List className="flex space-x-1 p-1 justify-center w-full text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+        <Tab.List className="flex justify-center flex-wrap space-x-1 p-1 w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
@@ -130,7 +130,7 @@ export default function SkillsSection() {
                 classNames(
                   'inline-block p-4 border-b-2 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300',
                   selected
-                    ? 'text-blue-600 border-blue-600 dark:text-blue-500 dark:border-blue-500'
+                    ? 'font-bold text-slate-900 border-slate-900 dark:text-gray-300 dark:border-gray-300 '
                     : 'border-transparent hover:border-gray-300 dark:hover:text-gray-300'
                 )
               }
