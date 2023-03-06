@@ -7,27 +7,26 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 
-import CssIcon from '@/images/programming/css.svg';
-import HtmlIcon from '@/images/programming/html.svg';
-import JavascriptIcon from '@/images/programming/javascript.svg';
-import TypescriptIcon from '@/images/programming/typescript.svg';
-
-import AngularIcon from '@/images/programming/angular.svg';
-import NextIcon from '@/images/programming/nextjs.svg';
-import ReactIcon from '@/images/programming/react.svg';
-import SassIcon from '@/images/programming/sass.svg';
-
-import ExpressIcon from '@/images/programming/express.svg';
-import MongoDBIcon from '@/images/programming/mongodb.svg';
-import MySqlIcon from '@/images/programming/mysql.svg';
-import NodejsIcon from '@/images/programming/nodejs.svg';
-import PhpIcon from '@/images/programming/php.svg';
-import SymfonyIcon from '@/images/programming/symfony.svg';
-
-import DockerIcon from '@/images/programming/docker.svg';
-import GitIcon from '@/images/programming/git.svg';
-import NetlifyIcon from '@/images/programming/netlify.svg';
-import VsCodeIcon from '@/images/programming/vscode.svg';
+import {
+  Angular,
+  Css,
+  Docker,
+  Express,
+  Git,
+  Html,
+  Javascript,
+  MongoDB,
+  MySQL,
+  Netlify,
+  Nextjs,
+  Nodejs,
+  PHP,
+  React,
+  Sass,
+  Symfony,
+  Typescript,
+  VSCode,
+} from '@/images/programming';
 
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ');
@@ -38,81 +37,81 @@ export default function SkillsSection() {
     Basics: [
       {
         name: 'HTML',
-        image: HtmlIcon,
+        image: Html,
       },
       {
         name: 'CSS',
-        image: CssIcon,
+        image: Css,
       },
       {
         name: 'JavaScript',
-        image: JavascriptIcon,
+        image: Javascript,
       },
       {
         name: 'TypeScript',
-        image: TypescriptIcon,
+        image: Typescript,
       },
     ],
     Front: [
       {
         name: 'Angular',
-        image: AngularIcon,
+        image: Angular,
       },
       {
         name: 'React.js',
-        image: ReactIcon,
+        image: React,
       },
       {
         name: 'Next.js',
-        image: NextIcon,
+        image: Nextjs,
       },
       {
         name: 'Sass',
-        image: SassIcon,
+        image: Sass,
       },
     ],
     Back: [
       {
         name: 'PHP',
-        image: PhpIcon,
+        image: PHP,
       },
       {
         name: 'Symfony',
-        image: SymfonyIcon,
+        image: Symfony,
       },
       {
         name: 'NodeJS',
-        image: NodejsIcon,
+        image: Nodejs,
       },
       {
         name: 'Express',
-        image: ExpressIcon,
+        image: Express,
       },
       {
         name: 'MySQL',
-        image: MySqlIcon,
+        image: MySQL,
       },
       {
         name: 'MongoDB',
-        image: MongoDBIcon,
+        image: MongoDB,
       },
     ],
     Toolsbox: [
       {
         name: 'VS Code',
-        image: VsCodeIcon,
+        image: VSCode,
       },
       {
         name: 'Docker',
-        image: DockerIcon,
+        image: Docker,
       },
       {
         name: 'Git',
-        image: GitIcon,
+        image: Git,
       },
       {
         name: 'Netlify',
-        image: NetlifyIcon,
+        image: Netlify,
       },
     ],
     Softskills: [],

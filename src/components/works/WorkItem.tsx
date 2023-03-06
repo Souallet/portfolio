@@ -28,9 +28,14 @@ export default function WorkItem({ work, className = '' }: Props) {
         </h3>
         <p className="font-medium">{work.description}</p>
         <div className="flex justify-between">
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {work.technologies.map((t: Techonology, i) => (
-              <div key={i}>{t.name}</div>
+              <Image
+                key={i}
+                src={t.image}
+                alt={`${t.name} Icon`}
+                className="h-6 w-6"
+              />
             ))}
           </div>
           <div className="flex gap-3">

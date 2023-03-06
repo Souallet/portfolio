@@ -6,6 +6,8 @@ import JudgeBot from '@/images/projects/judge-bot.png';
 import NewsUnlocker from '@/images/projects/news-unlocker.png';
 import NgBoilerplate from '@/images/projects/ng-boilerplate.png';
 
+import { Css, Html } from '@/images/programming';
+
 const works: Work[] = [
   {
     name: 'Leboncoin',
@@ -15,7 +17,10 @@ const works: Work[] = [
       preview: '',
       sourceCode: '',
     },
-    technologies: [{ name: 'html' }, { name: 'css' }],
+    technologies: [
+      { name: 'html', image: Html },
+      { name: 'css', image: Css },
+    ],
   },
   {
     name: 'Leboncoin',
@@ -25,7 +30,10 @@ const works: Work[] = [
       preview: '',
       sourceCode: '',
     },
-    technologies: [{ name: 'html' }, { name: 'css' }],
+    technologies: [
+      { name: 'html', image: Html },
+      { name: 'css', image: Css },
+    ],
   },
   {
     name: 'Leboncoin',
@@ -35,7 +43,10 @@ const works: Work[] = [
       preview: '',
       sourceCode: '',
     },
-    technologies: [{ name: 'html' }, { name: 'css' }],
+    technologies: [
+      { name: 'html', image: Html },
+      { name: 'css', image: Css },
+    ],
   },
 ];
 
