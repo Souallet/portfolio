@@ -33,7 +33,7 @@ function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function SkillsSection(): React.ReactNode {
+export default function SkillsSection() {
   let [categories] = useState({
     Basics: [
       {

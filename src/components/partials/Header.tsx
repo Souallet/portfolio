@@ -170,16 +170,20 @@ const NavItems = ({
   }[];
   mobile: boolean;
 }) => {
-  return navigation.map((item, index) => (
-    <Link
-      href={item?.path ? item.path : '#'}
-      className={classNames(
-        'outline-none transition-all focus-visible:ring-1 focus:outline-none dark:text-gray-300 flex justify-end',
-        mobile ? 'w-full block px-4 py-2 -ml-4' : 'inline-block px-4 py-2'
-      )}
-      key={index}
-    >
-      {item.title}
-    </Link>
-  ));
+  return (
+    <>
+      {navigation.map((item, index) => (
+        <Link
+          href={item?.path ? item.path : '#'}
+          className={classNames(
+            'outline-none transition-all focus-visible:ring-1 focus:outline-none dark:text-gray-300 flex justify-end',
+            mobile ? 'w-full block px-4 py-2 -ml-4' : 'inline-block px-4 py-2'
+          )}
+          key={index}
+        >
+          {item.title}
+        </Link>
+      ))}
+    </>
+  );
 };
