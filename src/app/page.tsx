@@ -7,7 +7,7 @@ import HeroSection from '@/components/sections/Home/Hero';
 import SkillsSection from '@/components/sections/Home/Skills';
 import WorksSection from '@/components/sections/Home/Works';
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="container mx-auto">
       <HeroSection />
@@ -18,4 +18,6 @@ export default function Home() {
       <ContactSection />
     </main>
   );
-}
+};
+
+export default Home;
