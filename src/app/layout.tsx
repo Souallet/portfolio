@@ -18,7 +18,7 @@ interface TProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: TProps) {
+const RootLayout = ({ children }: TProps) => {
   return (
     <html lang="fr">
       <body
@@ -32,4 +32,5 @@ export default function RootLayout({ children }: TProps) {
       </body>
     </html>
   );
-}
+};
+export default RootLayout;

@@ -7,10 +7,11 @@ type TProps = {
   children: React.ReactNode;
 };
 
-export default function Providers({ children }: TProps) {
+const Providers = ({ children }: TProps) => {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       {children}
     </ThemeProvider>
   );
-}
+};
+export default Providers;
