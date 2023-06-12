@@ -2,8 +2,8 @@ import GithubIcon from '@/components/icons/GithubIcon';
 import Card from '@/components/templates/Card';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 import { getSocialPath } from '@/utils/socials';
-import { classNames } from '@/utils/styles';
 import { Menu, Transition } from '@headlessui/react';
+import { cx } from 'class-variance-authority';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
@@ -105,7 +105,7 @@ const MobileMenu = () => {
                       <Menu.Item key={index}>
                         <Link
                           href={item?.path ? item.path : '#'}
-                          className={classNames(
+                          className={cx(
                             'outline-none transition-all focus-visible:ring-1 focus:outline-none dark:text-gray-300 flex justify-end',
                             'w-full block px-4 py-2 -ml-4 cursor-pointer'
                           )}
@@ -173,7 +173,7 @@ const NavItems = ({
       {navigation.map((item, index) => (
         <Link
           href={item?.path ? item.path : '#'}
-          className={classNames(
+          className={cx(
             'flex justify-end  outline-none transition-all focus-visible:ring-1 focus:outline-none hover:font-bold hover:text-slate-900 dark:text-gray-300 dark:hover:text-white',
             mobile ? 'w-full block px-4 py-2 -ml-4' : 'inline-block px-4 py-2'
           )}

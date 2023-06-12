@@ -27,7 +27,7 @@ import {
   Typescript,
   VSCode,
 } from '@/images/programming';
-import { classNames } from '@/utils/styles';
+import { cx } from 'class-variance-authority';
 
 export default function SkillsSection() {
   let [categories] = useState({
@@ -123,7 +123,7 @@ export default function SkillsSection() {
             <Tab
               key={category}
               className={({ selected }) =>
-                classNames(
+                cx(
                   'inline-block p-4 border-b-2 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300',
                   selected
                     ? 'font-bold text-slate-900 border-slate-900 dark:text-gray-300 dark:border-gray-300 '
