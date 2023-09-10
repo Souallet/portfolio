@@ -6,7 +6,7 @@ import { GithubIcon } from '@/components/icons';
 import { Techonology } from '@/types/Technology';
 import { Work } from '@/types/Work';
 import { EyeIcon } from '@heroicons/react/20/solid';
-import Card from '../templates/Card';
+import { Card } from '@ui/Card';
 
 type Props = {
   work: Work;
@@ -15,7 +15,7 @@ type Props = {
 
 export default function WorkItem({ work, className = '' }: Props) {
   return (
-    <Card className={`flex flex-col ${className}`}>
+    <Card>
       <Image
         src={work.image}
         alt={`Illustration of ${work.name}`}

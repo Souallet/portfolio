@@ -1,4 +1,3 @@
-import Card from '@/components/templates/Card';
 import SectionTitle from '@/components/templates/SectionTitle';
 import Image from 'next/image';
 
@@ -45,9 +44,9 @@ export default function ExperiencesSection() {
   return (
     <section className="my-32 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
-      <Card className="p-6 md:px-8 flex flex-wrap gap-8 md:gap-12 justify-evenly items-end">
+      <div className="p-6 md:px-8 flex flex-wrap gap-8 md:gap-12 justify-evenly items-end">
         {renderCompanies()}
-      </Card>
+      </div>
     </section>
   );
 }

@@ -1,5 +1,5 @@
-import Card from '@/components/templates/Card';
 import SectionTitle from '@/components/templates/SectionTitle';
+import { Card } from '@ui/Card';
 
 const educations = [
   {
@@ -31,19 +31,21 @@ export default function EducationsSection() {
 
       <div className="grid md:grid-cols-2 sm:gap-x-[10%] md:gap-x-[5%] gap-y-10 my-24 ">
         {educations.map((e, i) => (
-          <Card key={i} className="flex flex-col p-4 md:p-8 gap-4">
-            <div className="flex justify-between w-full">
-              <h3 className="text-slate-900 dark:text-slate-200 font-bold text-xl">
-                {e.degree}
-              </h3>
-              <span className="text-slate-500 dark:text-slate-400 ">
-                @{e.school}
-              </span>
+          <Card key={i}>
+            <div className="flex flex-col p-4 md:p-8 gap-4">
+              <div className="flex justify-between w-full">
+                <h3 className="text-slate-900 dark:text-slate-200 font-bold text-xl">
+                  {e.degree}
+                </h3>
+                <span className="text-slate-500 dark:text-slate-400 ">
+                  @{e.school}
+                </span>
+              </div>
+              <p className="text-slate-900 dark:text-slate-300">{e.name}</p>
+              <p className="text-slate-900 dark:text-slate-300">
+                {e.startedAt} - {e.endedAt}
+              </p>
             </div>
-            <p className="text-slate-900 dark:text-slate-300">{e.name}</p>
-            <p className="text-slate-900 dark:text-slate-300">
-              {e.startedAt} - {e.endedAt}
-            </p>
           </Card>
         ))}
       </div>

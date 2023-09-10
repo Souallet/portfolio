@@ -1,5 +1,4 @@
 import GithubIcon from '@/components/icons/GithubIcon';
-import Card from '@/components/templates/Card';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 import { getSocialPath } from '@/utils/socials';
 import { Menu, Transition } from '@headlessui/react';
@@ -64,7 +63,7 @@ const MobileMenu = () => {
         <>
           <div>
             <Menu.Button className="hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-              <Card className="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium dark:text-white">
+              <div className="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium dark:text-white">
                 Menu
                 <svg
                   className="w-6 h-6 fill-current"
@@ -85,7 +84,7 @@ const MobileMenu = () => {
                     />
                   )}
                 </svg>
-              </Card>
+              </div>
             </Menu.Button>
           </div>
           <Transition
@@ -99,7 +98,7 @@ const MobileMenu = () => {
           >
             <div>
               <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right ring-1 ring-black ring-opacity-5 focus:outline-none ">
-                <Card className="flex flex-col rounded-md px-4 py-2 text-sm font-medium dark:text-white divide-y divide-gray-100 opacity-100">
+                <div className="flex flex-col rounded-md px-4 py-2 text-sm font-medium dark:text-white divide-y divide-gray-100 opacity-100">
                   <div className="px-1 py-1 ">
                     {navigation.map((item, index) => (
                       <Menu.Item key={index}>
@@ -132,7 +131,7 @@ const MobileMenu = () => {
                       <GithubIcon /> <span>Github</span>
                     </Link>
                   </div>
-                </Card>
+                </div>
               </Menu.Items>
             </div>
           </Transition>

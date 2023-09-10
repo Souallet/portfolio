@@ -1,6 +1,5 @@
 'use client';
 
-import Card from '@/components/templates/Card';
 import SectionTitle from '@/components/templates/SectionTitle';
 import { Tab } from '@headlessui/react';
 import { useState } from 'react';
@@ -144,13 +143,13 @@ export default function SkillsSection() {
               <ul className="flex flex-row flex-wrap justify-center items-center gap-4 py-4">
                 {technologies.map((t) => (
                   <li key={t.name} className="relative rounded-md">
-                    <Card className="flex justify-center items-center h-24 w-24 p-4">
+                    <div className="flex justify-center items-center h-24 w-24 p-4">
                       <Image
                         src={t.image}
                         alt={`Logo ${t.name}`}
                         className=""
                       />
-                    </Card>
+                    </div>
                   </li>
                 ))}
               </ul>
