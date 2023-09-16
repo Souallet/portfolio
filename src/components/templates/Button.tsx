@@ -1,5 +1,6 @@
 'use client';
-import { classNames } from '@/utils/styles';
+
+import { cx } from 'class-variance-authority';
 
 type Props = {
   children: React.ReactNode;
@@ -18,7 +19,7 @@ export default function Button({
 
   switch (style) {
     case 'primary':
-      btnStyle = classNames(
+      btnStyle = cx(
         'sm:w-auto w-full flex items-center justify-center font-semibold h-12 px-6 rounded-lg border-2 border-transparent',
         `text-white bg-slate-900 hover:text-slate-900 hover:bg-inherit hover:border-slate-900`,
         'dark:bg-slate-200 dark:text-slate-900 dark:hover:bg-slate-900 dark:hover:text-slate-200 dark:hover:border-slate-200',

@@ -1,5 +1,3 @@
-import Card from '@/components/templates/Card';
-
 type Props = {
   available: boolean;
   description: string;
@@ -16,9 +14,9 @@ export default function AvailibilityStatus({ available, description }: Props) {
     );
   };
   return (
-    <Card className="py-3 px-5 flex items-center gap-4 rounded-full">
+    <div className="py-3 px-5 flex items-center gap-4 rounded-full">
       {renderStatusDot()}
       <div>Actuellement {available ? 'disponible' : 'indisponible'}</div>
-    </Card>
+    </div>
   );
 }

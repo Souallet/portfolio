@@ -1,4 +1,3 @@
-import Card from '@/components/templates/Card';
 import SectionTitle from '@/components/templates/SectionTitle';
 import Image from 'next/image';
 
@@ -6,27 +5,32 @@ import CadicServicesLogo from '@/images/companies/cadic_logo.png';
 import DisneylandParisLogo from '@/images/companies/disneyland_paris_logo.png';
 import LeboncoinLogo from '@/images/companies/leboncoin_logo.png';
 import OpenclassRoomsLogo from '@/images/companies/openclassrooms_logo.png';
+import { cx } from 'class-variance-authority';
 
 const companies = [
   {
     name: 'OpenClassRooms',
     logo: OpenclassRoomsLogo,
     maxHeight: 'max-h-6',
+    invert: false,
   },
   {
     name: 'Cadic Services',
     logo: CadicServicesLogo,
     maxHeight: 'max-h-7',
+    invert: false,
   },
   {
     name: 'Leboncoin',
     logo: LeboncoinLogo,
-    maxHeight: 'max-h-8',
+    maxHeight: 'max-h-7',
+    invert: false,
   },
   {
     name: 'Disneyland Paris',
     logo: DisneylandParisLogo,
-    maxHeight: 'max-h-8',
+    maxHeight: 'max-h-10',
+    invert: true,
   },
 ];
 
@@ -35,7 +39,11 @@ export default function ExperiencesSection() {
     return companies.map((c, i) => (
       <Image
         key={i}
-        className={`w-auto ${c.maxHeight}`}
+        className={cx(
+          `w-auto  brightness-200 contrast-200 grayscale`,
+          c.maxHeight,
+          c.invert ? 'invert' : 'invert-0'
+        )}
         src={c.logo}
         alt={`Logo ${c.name}`}
       />
@@ -45,9 +53,9 @@ export default function ExperiencesSection() {
   return (
     <section className="my-32 px-8 md:px-12 lg:px-16">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
-      <Card className="p-6 md:px-8 flex flex-wrap gap-8 md:gap-12 justify-evenly items-end">
+      <div className="p-6 md:px-8 flex flex-wrap gap-8 md:gap-12 justify-evenly items-center">
         {renderCompanies()}
-      </Card>
+      </div>
     </section>
   );
 }

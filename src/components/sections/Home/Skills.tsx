@@ -1,6 +1,5 @@
 'use client';
 
-import Card from '@/components/templates/Card';
 import SectionTitle from '@/components/templates/SectionTitle';
 import { Tab } from '@headlessui/react';
 import { useState } from 'react';
@@ -27,7 +26,7 @@ import {
   Typescript,
   VSCode,
 } from '@/images/programming';
-import { classNames } from '@/utils/styles';
+import { cx } from 'class-variance-authority';
 
 export default function SkillsSection() {
   let [categories] = useState({
@@ -123,7 +122,7 @@ export default function SkillsSection() {
             <Tab
               key={category}
               className={({ selected }) =>
-                classNames(
+                cx(
                   'inline-block p-4 border-b-2 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300',
                   selected
                     ? 'font-bold text-slate-900 border-slate-900 dark:text-gray-300 dark:border-gray-300 '
@@ -144,13 +143,13 @@ export default function SkillsSection() {
               <ul className="flex flex-row flex-wrap justify-center items-center gap-4 py-4">
                 {technologies.map((t) => (
                   <li key={t.name} className="relative rounded-md">
-                    <Card className="flex justify-center items-center h-24 w-24 p-4">
+                    <div className="flex justify-center items-center h-24 w-24 p-4">
                       <Image
                         src={t.image}
                         alt={`Logo ${t.name}`}
                         className=""
                       />
-                    </Card>
+                    </div>
                   </li>
                 ))}
               </ul>
