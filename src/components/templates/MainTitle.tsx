@@ -5,9 +5,7 @@ type Props = {
 
 export default function MainTitle({ children, className = '' }: Props) {
   return (
-    <h1
-      className={`text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white ${className}`}
-    >
+    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
       {children}
     </h1>
   );

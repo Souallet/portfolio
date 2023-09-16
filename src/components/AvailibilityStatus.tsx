@@ -14,7 +14,7 @@ export default function AvailibilityStatus({ available, description }: Props) {
     );
   };
   return (
-    <div className="py-3 px-5 flex items-center gap-4 rounded-full">
+    <div className="py-3 flex items-center gap-4 rounded-full">
       {renderStatusDot()}
       <div>Actuellement {available ? 'disponible' : 'indisponible'}</div>
     </div>
