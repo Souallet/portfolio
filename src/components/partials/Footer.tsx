@@ -46,7 +46,7 @@ export default function Footer() {
 
   return (
     <footer className="mb-8">
-      <div className="mt-10 text-center flex flex-col items-center">
+      <div className="mt-10 flex flex-col">
         <div className="flex flex-col items-center justify-between">
           <div className="flex flex-col md:flex-row items-center">
             {renderNav()}

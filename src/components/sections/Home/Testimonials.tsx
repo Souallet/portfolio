@@ -54,7 +54,7 @@ const educations = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="my-32 px-8 md:px-12 lg:px-16">
+    <section className="my-32">
       <SectionTitle>{`Leur témoignage`}</SectionTitle>
 
       <div className="grid md:grid-cols-2 sm:gap-x-[10%] md:gap-x-[5%] gap-y-10 my-24 ">

@@ -26,10 +26,10 @@ const educations = [
 
 export default function EducationsSection() {
   return (
-    <section className="my-32 px-8 md:px-12 lg:px-16">
+    <section className="my-32">
       <SectionTitle>{`Mes Formations`}</SectionTitle>
 
-      <div className="grid md:grid-cols-2 sm:gap-x-[10%] md:gap-x-[5%] gap-y-10 my-24 ">
+      <div className="grid md:grid-cols-2 sm:gap-x-[10%] md:gap-x-[5%] gap-y-10 ">
         {educations.map((e, i) => (
           <Card key={i}>
             <div className="flex flex-col p-4 md:p-8 gap-4">

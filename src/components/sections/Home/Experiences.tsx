@@ -51,9 +51,9 @@ export default function ExperiencesSection() {
   };
 
   return (
-    <section className="my-32 px-8 md:px-12 lg:px-16">
+    <section className="my-32">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
-      <div className="p-6 md:px-8 flex flex-wrap gap-8 md:gap-12 justify-evenly items-center">
+      <div className="flex flex-wrap gap-8 md:gap-12 justify-between items-center">
         {renderCompanies()}
       </div>
     </section>

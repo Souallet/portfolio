@@ -114,10 +114,10 @@ export default function SkillsSection() {
   });
 
   return (
-    <section className="my-32 px-8 md:px-12 lg:px-16">
+    <section className="my-32">
       <SectionTitle>{`Compétences`}</SectionTitle>
       <Tab.Group>
-        <Tab.List className="flex justify-center flex-wrap space-x-1 p-1 w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+        <Tab.List className="flex flex-wrap space-x-1 p-1 w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
@@ -140,7 +140,7 @@ export default function SkillsSection() {
               key={idx}
               className="ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none"
             >
-              <ul className="flex flex-row flex-wrap justify-center items-center gap-4 py-4">
+              <ul className="flex flex-row flex-wrap items-center gap-4 py-4">
                 {technologies.map((t) => (
                   <li key={t.name} className="relative rounded-md">
                     <div className="flex justify-center items-center h-24 w-24 p-4">
