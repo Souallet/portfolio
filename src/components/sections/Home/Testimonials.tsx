@@ -66,7 +66,7 @@ export default function TestimonialsSection() {
   );
 }
 
-const Testimonial = ({ testimonial }) => {
+const Testimonial = ({ testimonial }: { testimonial: any }) => {
   return (
     <Card>
       <div className="flex flex-col p-4 md:p-8 gap-8">
