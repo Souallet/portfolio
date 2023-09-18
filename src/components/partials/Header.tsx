@@ -38,7 +38,7 @@ export default function Header() {
             href="/"
             className="flex items-center space-x-2 text-xl font-medium transition-all text-slate-900 focus-visible:ring-1 focus:outline-none hover:font-bold hover:tracking-wide dark:text-gray-300 dark:hover:text-white"
           >
-            sébastien.ouallet
+            Sébastien Ouallet
           </Link>
           <div className="lg:hidden">
             <MobileMenu />

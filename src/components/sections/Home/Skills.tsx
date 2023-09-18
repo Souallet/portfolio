@@ -117,13 +117,13 @@ export default function SkillsSection() {
     <section className="my-32">
       <SectionTitle>{`Compétences`}</SectionTitle>
       <Tab.Group>
-        <Tab.List className="flex flex-wrap space-x-1 p-1 w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+        <Tab.List className="flex flex-wrap font-medium gap-8 dark:text-gray-400">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 cx(
-                  'inline-block p-4 border-b-2 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300',
+                  'inline-block border-b-2 py-2 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 focus:ring-0',
                   selected
                     ? 'font-bold text-slate-900 border-slate-900 dark:text-gray-300 dark:border-gray-300 '
                     : 'border-transparent hover:border-gray-300 dark:hover:text-gray-300'

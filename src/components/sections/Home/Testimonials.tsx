@@ -5,13 +5,13 @@ import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 import { FC, useCallback, useState } from 'react';
 
-const educations = [
+const testimonials = [
   {
     firstname: 'Valentin',
     lastname: 'Gerum',
     source: 'https://www.malt.fr/profile/sebastienouallet',
     company: 'Leboncoin',
-    date: new Date(2023, 6, 19),
+    date: new Date(2023, 5, 19),
     testimonial: `Une super collaboration avec Sebastien en charge de nous aider à faire évoluer nos parcours d'authentification. Bonne prise en main du sujet, échange fluide au sein de l'équipe et des développeurs autour de lui. Je recommande.`,
     icon: '',
   },
@@ -20,7 +20,7 @@ const educations = [
     lastname: 'Ausset-Delon',
     source: 'https://www.linkedin.com/in/sebastien-ouallet',
     company: 'Cadic Services',
-    date: new Date(2022, 11, 23),
+    date: new Date(2022, 10, 23),
     testimonial: `Sébastien s'est intégré très rapidement au sein des équipes de la société. Aussi bien auprès des développeurs avec lesquels il travaillait au quotidien, mais aussi avec l'équipe opérationnelle pour laquelle il opérait régulièrement en soutien technique.
     Professionnel sur tous les aspects des missions qui lui ont été confiées, il a toujours produit un code de grande qualité et, ce qui est plus rare, un même niveau d'excellence sur la documentation inhérente.
     Toutes les personnes avec lesquelles il a collaboré ont été unanimes... Ses grandes qualités humaines et techniques faisaient de Sébastien un collaborateur avec lequel il était facile et agréable de travailler.`,
@@ -31,7 +31,7 @@ const educations = [
     lastname: 'Mannino',
     source: 'https://www.linkedin.com/in/sebastien-ouallet',
     company: 'Cadic Services',
-    date: new Date(2022, 9, 19),
+    date: new Date(2022, 8, 19),
     testimonial: `Sébastien a intégré notre équipe de développement en alternance pendant deux ans. Dès son arrivée nous avons décelé un fort potentiel. Sébastien nous a rejoint avec un bagage technique solide et déjà une méthodologie de travail rigoureuse. Outre ses qualités de développeur nous avons fortement apprécié ses capacités de communication vers des publics non techniques et plus encore la qualité de ses documentations.
     Sébastien a rapidement pris des compétences sur nos outils métier (Ged, Knowledge Management, record management) et il s'est révélé très efficace dans le développement de nouveaux modules mais aussi dans l'intégration avec d'autres applications.
     Nous avons recruté Sébastien immédiatement dans la continuité de sa formation en alternance.
@@ -45,7 +45,7 @@ const educations = [
     lastname: 'Ouallet',
     source: 'https://www.linkedin.com/in/sebastien-ouallet',
     company: 'Entrepreneur',
-    date: new Date(2022, 6, 2),
+    date: new Date(2022, 5, 2),
     testimonial: `Sébastien est très professionnel, ponctuel et consciencieux.
     Je vous le recommande.`,
     icon: '',
@@ -57,10 +57,15 @@ export default function TestimonialsSection() {
     <section className="my-32">
       <SectionTitle>{`Leur témoignage`}</SectionTitle>
 
-      <div className="grid md:grid-cols-2 sm:gap-x-[10%] md:gap-x-[5%] gap-y-10 my-24 ">
-        {educations.map((t, i) => (
-          <Testimonial key={i} testimonial={t} />
-        ))}
+      <div className="grid grid-cols-2 gap-8 items-baseline">
+        <div className="grid gap-8">
+          <Testimonial testimonial={testimonials[0]} />
+          <Testimonial testimonial={testimonials[1]} />
+        </div>
+        <div className="grid gap-8">
+          <Testimonial testimonial={testimonials[2]} />
+          <Testimonial testimonial={testimonials[3]} />
+        </div>
       </div>
     </section>
   );

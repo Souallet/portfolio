@@ -20,7 +20,7 @@ export default function WorkItem({ work }: Props) {
           <Image
             src={work.image}
             alt={`Illustration of ${work.name}`}
-            className="rounded-xl"
+            className="rounded-t-xl"
             priority
           />
         )}

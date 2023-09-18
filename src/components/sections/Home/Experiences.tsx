@@ -12,25 +12,21 @@ const companies = [
     name: 'OpenClassRooms',
     logo: OpenclassRoomsLogo,
     maxHeight: 'max-h-6',
-    invert: false,
   },
   {
     name: 'Cadic Services',
     logo: CadicServicesLogo,
     maxHeight: 'max-h-7',
-    invert: false,
   },
   {
     name: 'Leboncoin',
     logo: LeboncoinLogo,
     maxHeight: 'max-h-7',
-    invert: false,
   },
   {
     name: 'Disneyland Paris',
     logo: DisneylandParisLogo,
     maxHeight: 'max-h-10',
-    invert: true,
   },
 ];
 
@@ -39,11 +35,7 @@ export default function ExperiencesSection() {
     return companies.map((c, i) => (
       <Image
         key={i}
-        className={cx(
-          `w-auto  brightness-200 contrast-200 grayscale`,
-          c.maxHeight,
-          c.invert ? 'invert' : 'invert-0'
-        )}
+        className={cx(`w-auto`, c.maxHeight)}
         src={c.logo}
         alt={`Logo ${c.name}`}
       />

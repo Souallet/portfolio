@@ -29,10 +29,10 @@ export default function EducationsSection() {
     <section className="my-32">
       <SectionTitle>{`Mes Formations`}</SectionTitle>
 
-      <div className="grid md:grid-cols-2 sm:gap-x-[10%] md:gap-x-[5%] gap-y-10 ">
-        {educations.map((e, i) => (
-          <Card key={i}>
-            <div className="flex flex-col p-4 md:p-8 gap-4">
+      <div className="flex gap-8 flex-col-reverse md:flex-row ">
+        {educations.map((e, i, arr) => (
+          <Card key={i} className="flex-1">
+            <div className="flex flex-col gap-4 p-4 md:p-8 ">
               <div className="flex justify-between w-full">
                 <h3 className="text-slate-900 dark:text-slate-200 font-bold text-xl">
                   {e.degree}
