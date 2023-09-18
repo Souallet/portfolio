@@ -3,8 +3,6 @@ import WorkItem from '@/components/works/WorkItem';
 import { Work } from '@/types/Work';
 
 import JudgeBot from '@/images/projects/judge-bot.png';
-import NewsUnlocker from '@/images/projects/news-unlocker.png';
-import NgBoilerplate from '@/images/projects/ng-boilerplate.png';
 
 import { Css, Html } from '@/images/programming';
 
@@ -25,7 +23,6 @@ const works: Work[] = [
   {
     name: 'Leboncoin',
     description: 'Ceci est la description du projet.',
-    image: NewsUnlocker,
     links: {
       preview: '',
       sourceCode: '',
@@ -38,7 +35,6 @@ const works: Work[] = [
   {
     name: 'Leboncoin',
     description: 'Ceci est la description du projet.',
-    image: NgBoilerplate,
     links: {
       preview: '',
       sourceCode: '',
@@ -51,17 +47,22 @@ const works: Work[] = [
 ];
 
 export default function WorksSection() {
-  const renderWorks = (): React.ReactNode => {
-    return works.map((w, i) => (
-      <WorkItem key={i} work={w} className="w-full sm:w-[45%] md:w-[30%]" />
-    ));
-  };
-
   return (
-    <section className="my-32 px-8 md:px-12 lg:px-16">
-      <SectionTitle>{`Quelques projets`}</SectionTitle>
-      <div className="flex flex-wrap justify-center items-center sm:gap-x-[10%] md:gap-x-[5%]  gap-y-10">
-        {renderWorks()}
+    <section className="my-32">
+      <SectionTitle>{`Mes réalisations`}</SectionTitle>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="col-span-1">
+          <WorkItem work={works[0]} />
+        </div>
+        <div className="col-span-1 flex flex-col gap-4">
+          <div className="h-1/2">
+            <WorkItem work={works[1]} />
+          </div>
+          <div className="h-1/2">
+            <WorkItem work={works[2]} />
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ type Props = {
 export default function SectionTitle({ children, className = '' }: Props) {
   return (
     <h2
-      className={`text-center text-slate-900 text-4xl tracking-tight font-extrabold dark:text-white mb-8 ${className}`}
+      className={`text-3xl tracking-wide font-semibold text-slate-900  dark:text-white mb-8 ${className}`}
     >
       {children}
     </h2>
