@@ -1,5 +1,5 @@
-import Button from '@/components/templates/Button';
 import SectionTitle from '@/components/templates/SectionTitle';
+import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 import { useRouter } from 'next/navigation';
 
@@ -17,13 +17,7 @@ export default function ContactSection() {
         <p className="text-lg md:text-md lg:text-xl xl:text-2xl dark:text-zinc-100">
           {`Une idée en tête ? Parlons en !`}
         </p>
-        <Button
-          style="primary"
-          className="max-w-fit"
-          onClick={redirectToMailTo}
-        >
-          Envoyez-moi un mail !
-        </Button>
+        <Button onClick={redirectToMailTo}>Envoyez-moi un mail !</Button>
       </div>
     </section>
   );

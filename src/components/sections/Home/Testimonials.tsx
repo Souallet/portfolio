@@ -1,16 +1,23 @@
 import SectionTitle from '@/components/templates/SectionTitle';
-import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { cx } from 'class-variance-authority';
-import { format } from 'date-fns';
-import { fr } from 'date-fns/locale';
-import { FC, useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 const testimonials = [
   {
     firstname: 'Valentin',
     lastname: 'Gerum',
-    source: 'https://www.malt.fr/profile/sebastienouallet',
+    job_title: 'Engineering Manager',
     company: 'Leboncoin',
+    source: 'https://www.malt.fr/profile/sebastienouallet',
     date: new Date(2023, 5, 19),
     testimonial: `Une super collaboration avec Sebastien en charge de nous aider à faire évoluer nos parcours d'authentification. Bonne prise en main du sujet, échange fluide au sein de l'équipe et des développeurs autour de lui. Je recommande.`,
     icon: '',
@@ -18,8 +25,9 @@ const testimonials = [
   {
     firstname: 'Laurent',
     lastname: 'Ausset-Delon',
-    source: 'https://www.linkedin.com/in/sebastien-ouallet',
+    job_title: 'Directeur général exécutif',
     company: 'Cadic Services',
+    source: 'https://www.linkedin.com/in/sebastien-ouallet',
     date: new Date(2022, 10, 23),
     testimonial: `Sébastien s'est intégré très rapidement au sein des équipes de la société. Aussi bien auprès des développeurs avec lesquels il travaillait au quotidien, mais aussi avec l'équipe opérationnelle pour laquelle il opérait régulièrement en soutien technique.
     Professionnel sur tous les aspects des missions qui lui ont été confiées, il a toujours produit un code de grande qualité et, ce qui est plus rare, un même niveau d'excellence sur la documentation inhérente.
@@ -29,8 +37,9 @@ const testimonials = [
   {
     firstname: 'Sébastien',
     lastname: 'Mannino',
-    source: 'https://www.linkedin.com/in/sebastien-ouallet',
+    job_title: 'Responsable R&D',
     company: 'Cadic Services',
+    source: 'https://www.linkedin.com/in/sebastien-ouallet',
     date: new Date(2022, 8, 19),
     testimonial: `Sébastien a intégré notre équipe de développement en alternance pendant deux ans. Dès son arrivée nous avons décelé un fort potentiel. Sébastien nous a rejoint avec un bagage technique solide et déjà une méthodologie de travail rigoureuse. Outre ses qualités de développeur nous avons fortement apprécié ses capacités de communication vers des publics non techniques et plus encore la qualité de ses documentations.
     Sébastien a rapidement pris des compétences sur nos outils métier (Ged, Knowledge Management, record management) et il s'est révélé très efficace dans le développement de nouveaux modules mais aussi dans l'intégration avec d'autres applications.
@@ -43,8 +52,9 @@ const testimonials = [
   {
     firstname: 'Cédric',
     lastname: 'Ouallet',
+    job_title: 'Entrepreneur',
+    company: 'Indépendant',
     source: 'https://www.linkedin.com/in/sebastien-ouallet',
-    company: 'Entrepreneur',
     date: new Date(2022, 5, 2),
     testimonial: `Sébastien est très professionnel, ponctuel et consciencieux.
     Je vous le recommande.`,
@@ -72,39 +82,9 @@ export default function TestimonialsSection() {
 }
 
 const Testimonial = ({ testimonial }: { testimonial: any }) => {
-  return (
-    <Card>
-      <div className="flex flex-col p-4 md:p-8 gap-8">
-        <div className="flex justify-between w-full">
-          <div className="flex flex-col gap-2">
-            <h3 className="text-slate-900 dark:text-slate-200 font-bold text-xl">
-              {`${testimonial.firstname} ${testimonial.lastname}`}
-            </h3>
-            <p className="text-slate-500 dark:text-slate-400 ">
-              @{testimonial.company}
-            </p>
-          </div>
-          <p className="text-slate-900 dark:text-slate-300">
-            {format(testimonial.date, 'dd MMM yyyy', { locale: fr })}
-          </p>
-        </div>
-
-        <TextTruncate text={testimonial.testimonial} />
-      </div>
-    </Card>
-  );
-};
-
-type TextTruncateProps = {
-  text: string;
-};
-
-export const TextTruncate: FC<TextTruncateProps> = ({ text }) => {
   const [shouldTruncate, setShouldTruncate] = useState<boolean>(false);
   const [readMore, setReadMore] = useState<boolean>(false);
 
-  // Measure the element to calculate the number of lines and
-  // determine whether to truncate
   const measuredRef = useCallback(
     (node: any) => {
       // Before the component mounts the node ref will be null
@@ -120,30 +100,36 @@ export const TextTruncate: FC<TextTruncateProps> = ({ text }) => {
         setShouldTruncate(elLineCount > 3);
       }
     },
-    [text]
+    [testimonial.testimonial]
   );
 
   return (
-    <div className="flex flex-col gap-4">
-      <p
+    <Card className="space-y-4">
+      <CardHeader className="flex flex-col gap-2 pb-0">
+        <CardTitle className="flex flex-wrap justify-between gap-3">
+          {testimonial.firstname} {testimonial.lastname}
+          <span className="text-sm text-muted-foreground">
+            @{testimonial.company}
+          </span>
+        </CardTitle>
+        <CardDescription>{testimonial.job_title}</CardDescription>
+      </CardHeader>
+      <CardContent
         ref={measuredRef}
         className={cx(
-          'text-slate-900 dark:text-slate-300 line-clamp-3',
+          'py-0 line-clamp-3',
           shouldTruncate && !readMore ? 'line-clamp-3' : 'line-clamp-none'
         )}
       >
-        {text}
-      </p>
-
-      {shouldTruncate && (
-        <button
-          type="button"
-          onClick={() => setReadMore(!readMore)}
-          className="w-fit"
-        >
-          {readMore ? 'Afficher moins' : 'Afficher plus'}
-        </button>
-      )}
-    </div>
+        {testimonial.testimonial}
+      </CardContent>
+      <CardFooter>
+        {shouldTruncate && (
+          <Button variant={'ghost'} onClick={() => setReadMore(!readMore)}>
+            {readMore ? 'Afficher moins' : 'Afficher plus'}
+          </Button>
+        )}
+      </CardFooter>
+    </Card>
   );
 };
