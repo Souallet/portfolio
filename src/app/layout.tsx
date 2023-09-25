@@ -2,7 +2,7 @@
 
 import Providers from '@/app/Providers';
 import Footer from '@/components/partials/Footer';
-import Header from '@/components/partials/Header';
+import Header from '@/components/partials/header';
 import { Inter } from 'next/font/google';
 import React from 'react';
 import './globals.css';
