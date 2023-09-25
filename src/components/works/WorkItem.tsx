@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 
-import { GithubIcon } from '@/components/icons';
+import { Card } from '@/components/ui/card';
 import { Techonology } from '@/types/Technology';
 import { Work } from '@/types/Work';
 import { EyeIcon } from '@heroicons/react/20/solid';
-import { Card } from '@ui/Card';
+import { Icons } from '../icons';
 
 type Props = {
   work: Work;
@@ -48,7 +48,7 @@ export default function WorkItem({ work }: Props) {
                 <EyeIcon className="h-6 w-6" />
               </a>
               <a href={work.links.sourceCode} target="_blank">
-                <GithubIcon className="h-6 w-6" />
+                <Icons.github className="h-5 w-5" />
               </a>
             </div>
           </div>

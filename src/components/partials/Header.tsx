@@ -5,29 +5,6 @@ import { Icons } from '../icons';
 import { MainNav } from '../main-nav';
 import { buttonVariants } from '../ui/button';
 
-const navigation = [
-  {
-    path: '/',
-    title: 'Réalisations',
-  },
-  {
-    path: '/',
-    title: 'Formations',
-  },
-  {
-    path: '/',
-    title: 'Compétences',
-  },
-  {
-    path: '/',
-    title: 'Expériences',
-  },
-  {
-    path: '/',
-    title: 'Contact',
-  },
-];
-
 export default function Header() {
   return (
     <header className="bg-background sticky top-0 z-40 w-full border-b">
@@ -46,8 +23,8 @@ export default function Header() {
                   variant: 'ghost',
                 })}
               >
-                <Icons.gitHub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+                <Icons.github className="h-5 w-5" />
+                <span className="sr-only">Github</span>
               </div>
             </Link>
             <ThemeToggle />

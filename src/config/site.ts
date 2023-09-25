@@ -37,5 +37,10 @@ export const siteConfig = {
   ],
   links: {
     github: 'https://github.com/Souallet',
+    youtube: '',
+    twitch: '',
+    malt: '',
+    linkedin: '',
+    mail: 'sebastien.ouallet@gmail.com',
   },
 };

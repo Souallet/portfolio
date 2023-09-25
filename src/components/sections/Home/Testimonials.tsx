@@ -1,5 +1,5 @@
 import SectionTitle from '@/components/templates/SectionTitle';
-import { Card } from '@ui/Card';
+import { Card } from '@/components/ui/card';
 import { cx } from 'class-variance-authority';
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';

@@ -1,13 +1,13 @@
 import Button from '@/components/templates/Button';
 import SectionTitle from '@/components/templates/SectionTitle';
-import { getSocialPath } from '@/utils/socials';
+import { siteConfig } from '@/config/site';
 import { useRouter } from 'next/navigation';
 
 export default function ContactSection() {
   const router = useRouter();
 
   const redirectToMailTo = () => {
-    router.push(getSocialPath('Mail')?.path ?? '/');
+    router.push(`mailto:${siteConfig.links.mail}`);
   };
 
   return (
