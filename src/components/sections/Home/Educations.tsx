@@ -1,5 +1,11 @@
 import SectionTitle from '@/components/templates/SectionTitle';
-import { Card } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 const educations = [
   {
@@ -28,24 +34,21 @@ export default function EducationsSection() {
   return (
     <section className="my-32">
       <SectionTitle>{`Mes Formations`}</SectionTitle>
-
-      <div className="flex gap-8 flex-col-reverse md:flex-row ">
-        {educations.map((e, i, arr) => (
-          <Card key={i} className="flex-1">
-            <div className="flex flex-col gap-4 p-4 md:p-8 ">
-              <div className="flex justify-between w-full">
-                <h3 className="text-slate-900 dark:text-slate-200 font-bold text-xl">
-                  {e.degree}
-                </h3>
-                <span className="text-slate-500 dark:text-slate-400 ">
+      <div className="gap-8 grid grid-cols-1 md:grid-cols-2 ">
+        {educations.map((e, i) => (
+          <Card key={i} className="col-span-1">
+            <CardHeader className="flex flex-col gap-2">
+              <CardTitle className="flex flex-wrap justify-between gap-3">
+                {e.degree}
+                <span className="text-sm text-muted-foreground">
                   @{e.school}
                 </span>
-              </div>
-              <p className="text-slate-900 dark:text-slate-300">{e.name}</p>
-              <p className="text-slate-900 dark:text-slate-300">
+              </CardTitle>
+              <CardDescription>
                 {e.startedAt} - {e.endedAt}
-              </p>
-            </div>
+              </CardDescription>
+            </CardHeader>
+            <CardContent>{e.name}</CardContent>
           </Card>
         ))}
       </div>

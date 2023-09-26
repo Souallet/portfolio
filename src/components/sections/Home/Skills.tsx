@@ -116,7 +116,7 @@ export default function SkillsSection() {
     <section className="my-32">
       <SectionTitle>{`Compétences`}</SectionTitle>
 
-      <Tabs defaultValue="1">
+      <Tabs defaultValue={0}>
         <TabsList>
           {Object.keys(categories).map((category, i) => (
             <TabsTrigger key={category} value={i}>
