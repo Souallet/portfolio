@@ -13,7 +13,7 @@ export default function ContactSection() {
   return (
     <section className="my-32 flex flex-col">
       <SectionTitle>{`Restons en contact`}</SectionTitle>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-4">
         <p className="text-lg md:text-md lg:text-xl xl:text-2xl dark:text-zinc-100">
           {`Une idée en tête ? Parlons en !`}
         </p>
