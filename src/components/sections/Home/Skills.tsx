@@ -1,11 +1,11 @@
 'use client';
 
 import SectionTitle from '@/components/templates/SectionTitle';
-import { Tab } from '@headlessui/react';
 import { useState } from 'react';
 
 import Image from 'next/image';
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Angular,
   Css,
@@ -26,7 +26,6 @@ import {
   Typescript,
   VSCode,
 } from '@/images/programming';
-import { cx } from 'class-variance-authority';
 
 export default function SkillsSection() {
   let [categories] = useState({
@@ -116,47 +115,30 @@ export default function SkillsSection() {
   return (
     <section className="my-32">
       <SectionTitle>{`Compétences`}</SectionTitle>
-      <Tab.Group>
-        <Tab.List className="flex flex-wrap font-medium gap-8 dark:text-gray-400">
-          {Object.keys(categories).map((category) => (
-            <Tab
-              key={category}
-              className={({ selected }) =>
-                cx(
-                  'inline-block border-b-2 py-2 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 focus:ring-0',
-                  selected
-                    ? 'font-bold text-slate-900 border-slate-900 dark:text-gray-300 dark:border-gray-300 '
-                    : 'border-transparent hover:border-gray-300 dark:hover:text-gray-300'
-                )
-              }
-            >
+
+      <Tabs defaultValue="1">
+        <TabsList>
+          {Object.keys(categories).map((category, i) => (
+            <TabsTrigger key={category} value={i}>
               {category}
-            </Tab>
+            </TabsTrigger>
           ))}
-        </Tab.List>
-        <Tab.Panels className="mt-2">
-          {Object.values(categories).map((technologies, idx) => (
-            <Tab.Panel
-              key={idx}
-              className="ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none"
-            >
-              <ul className="flex flex-row flex-wrap items-center gap-4 py-4">
-                {technologies.map((t) => (
-                  <li key={t.name} className="relative rounded-md">
-                    <div className="flex justify-center items-center h-24 w-24 p-4">
-                      <Image
-                        src={t.image}
-                        alt={`Logo ${t.name}`}
-                        className=""
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </Tab.Panel>
-          ))}
-        </Tab.Panels>
-      </Tab.Group>
+        </TabsList>
+
+        {Object.values(categories).map((technologies, i) => (
+          <TabsContent value={i} key={i} classNa>
+            <ul className="flex flex-row flex-wrap items-center gap-4 py-4">
+              {technologies.map((t) => (
+                <li key={t.name} className="relative rounded-md">
+                  <div className="flex justify-center items-center h-24 w-24 p-4">
+                    <Image src={t.image} alt={`Logo ${t.name}`} className="" />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </TabsContent>
+        ))}
+      </Tabs>
     </section>
   );
 }
