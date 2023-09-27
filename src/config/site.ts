@@ -3,6 +3,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'Sébastien Ouallet',
   description: 'Portfolio de Sébastien Ouallet',
+  available: false,
   navigation: [
     {
       href: '/',

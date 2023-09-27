@@ -1,5 +1,6 @@
-import AvailibilityStatus from '@/components/AvailibilityStatus';
+import AvailibilityStatus from '@/components/availibility-status';
 import MainTitle from '@/components/templates/MainTitle';
+import { siteConfig } from '@/config/site';
 
 export default function HeroSection() {
   return (
@@ -13,7 +14,7 @@ export default function HeroSection() {
       </div>
 
       <AvailibilityStatus
-        available={false}
+        available={siteConfig.available}
         description={`Mission longue durée`}
       />
     </section>
