@@ -1,6 +1,6 @@
-import SectionTitle from '@/components/templates/SectionTitle';
 import Image from 'next/image';
 
+import { Section, SectionTitle } from '@/components/ui/section';
 import CadicServicesLogo from '@/images/companies/cadic_logo.png';
 import DisneylandParisLogo from '@/images/companies/disneyland_paris_logo.png';
 import LeboncoinLogo from '@/images/companies/leboncoin_logo.png';
@@ -43,11 +43,11 @@ export default function ExperiencesSection() {
   };
 
   return (
-    <section className="my-32">
+    <Section>
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
       <div className="flex flex-wrap gap-8 md:gap-12 justify-between items-center">
         {renderCompanies()}
       </div>
-    </section>
+    </Section>
   );
 }

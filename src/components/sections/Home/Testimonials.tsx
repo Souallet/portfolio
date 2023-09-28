@@ -1,4 +1,3 @@
-import SectionTitle from '@/components/templates/SectionTitle';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -8,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Section, SectionTitle } from '@/components/ui/section';
 import { cx } from 'class-variance-authority';
 import { useCallback, useState } from 'react';
 
@@ -64,7 +64,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="my-32">
+    <Section>
       <SectionTitle>{`Leur témoignage`}</SectionTitle>
 
       <div className="grid grid-cols-2 gap-8 items-baseline">
@@ -77,7 +77,7 @@ export default function TestimonialsSection() {
           <Testimonial testimonial={testimonials[3]} />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

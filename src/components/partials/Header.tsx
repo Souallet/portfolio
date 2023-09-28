@@ -16,7 +16,7 @@ export default function Header() {
           <MainNav items={siteConfig.navigation} />
         </div>
         <ActionsNav />
-        <MobileNav items={siteConfig.navigation ?? []} />
+        <MobileNav items={siteConfig.navigation} />
       </div>
     </header>
   );

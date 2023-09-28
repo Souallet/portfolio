@@ -1,10 +1,10 @@
 'use client';
 
-import SectionTitle from '@/components/templates/SectionTitle';
 import { useState } from 'react';
 
 import Image from 'next/image';
 
+import { Section, SectionTitle } from '@/components/ui/section';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Angular,
@@ -113,20 +113,20 @@ export default function SkillsSection() {
   });
 
   return (
-    <section className="my-32">
+    <Section>
       <SectionTitle>{`Compétences`}</SectionTitle>
 
-      <Tabs defaultValue={0}>
+      <Tabs defaultValue="0">
         <TabsList>
           {Object.keys(categories).map((category, i) => (
-            <TabsTrigger key={category} value={i}>
+            <TabsTrigger key={category} value={`${i}`}>
               {category}
             </TabsTrigger>
           ))}
         </TabsList>
 
         {Object.values(categories).map((technologies, i) => (
-          <TabsContent value={i} key={i} classNa>
+          <TabsContent value={`${i}`} key={i}>
             <ul className="flex flex-row flex-wrap items-center gap-4 py-4">
               {technologies.map((t) => (
                 <li key={t.name} className="relative rounded-md">
@@ -139,6 +139,6 @@ export default function SkillsSection() {
           </TabsContent>
         ))}
       </Tabs>
-    </section>
+    </Section>
   );
 }

@@ -1,9 +1,9 @@
-import SectionTitle from '@/components/templates/SectionTitle';
 import WorkItem from '@/components/works/WorkItem';
 import { Work } from '@/types/Work';
 
 import JudgeBot from '@/images/projects/judge-bot.png';
 
+import { Section, SectionTitle } from '@/components/ui/section';
 import { Css, Html } from '@/images/programming';
 
 const works: Work[] = [
@@ -48,7 +48,7 @@ const works: Work[] = [
 
 export default function WorksSection() {
   return (
-    <section className="my-32">
+    <Section>
       <SectionTitle>{`Mes réalisations`}</SectionTitle>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -64,6 +64,6 @@ export default function WorksSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

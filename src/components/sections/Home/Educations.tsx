@@ -1,4 +1,3 @@
-import SectionTitle from '@/components/templates/SectionTitle';
 import {
   Card,
   CardContent,
@@ -6,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Section, SectionTitle } from '@/components/ui/section';
 
 const educations = [
   {
@@ -32,7 +32,7 @@ const educations = [
 
 export default function EducationsSection() {
   return (
-    <section className="my-32">
+    <Section>
       <SectionTitle>{`Mes Formations`}</SectionTitle>
       <div className="gap-8 grid grid-cols-1 md:grid-cols-2 ">
         {educations.map((e, i) => (
@@ -52,6 +52,6 @@ export default function EducationsSection() {
           </Card>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
