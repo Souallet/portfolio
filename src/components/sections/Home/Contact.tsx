@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Section, SectionTitle } from '@/components/ui/section';
+import { Section, SectionBadge, SectionTitle } from '@/components/ui/section';
 import { siteConfig } from '@/config/site';
 import { useRouter } from 'next/navigation';
 
@@ -12,6 +12,7 @@ export default function ContactSection() {
 
   return (
     <Section>
+      <SectionBadge>Contact</SectionBadge>
       <SectionTitle>{`Restons en contact`}</SectionTitle>
       <div className="flex flex-wrap items-center justify-between gap-4">
         <p className="text-lg md:text-md lg:text-xl xl:text-2xl dark:text-zinc-100">

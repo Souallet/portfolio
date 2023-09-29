@@ -7,7 +7,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Section, SectionTitle } from '@/components/ui/section';
+import {
+  Section,
+  SectionBadge,
+  SectionDescription,
+  SectionTitle,
+} from '@/components/ui/section';
 import { cx } from 'class-variance-authority';
 import { useCallback, useState } from 'react';
 
@@ -65,7 +70,9 @@ const testimonials = [
 export default function TestimonialsSection() {
   return (
     <Section>
-      <SectionTitle>{`Leur témoignage`}</SectionTitle>
+      <SectionBadge>Témoignages</SectionBadge>
+      <SectionTitle>Leurs avis</SectionTitle>
+      <SectionDescription>{`Ce qu'ils ont pensé de notre collaboration`}</SectionDescription>
 
       <div className="grid grid-cols-2 gap-8 items-baseline">
         <div className="grid gap-8">

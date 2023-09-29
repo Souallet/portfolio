@@ -1,6 +1,15 @@
 import React from 'react';
 
+import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+
+const SectionBadge = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }) => (
+  <Badge className={cn('mb-4', className)} variant="outline" {...props} />
+));
+SectionBadge.displayName = 'SectionBadge';
 
 const SectionTitle = React.forwardRef<
   HTMLHeadingElement,
@@ -20,7 +29,7 @@ const SectionDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn('text-md text-muted-foreground', className)}
+    className={cn('mb-10 text-md text-muted-foreground', className)}
     {...props}
   />
 ));
@@ -34,4 +43,4 @@ const Section = React.forwardRef<
 });
 Section.displayName = 'Section';
 
-export { Section, SectionTitle, SectionDescription };
+export { Section, SectionTitle, SectionDescription, SectionBadge };
