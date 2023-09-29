@@ -1,4 +1,4 @@
-import { type Techonology } from '@/types/technology';
+import { type Techonology } from '@/types/Technology';
 import { StaticImageData } from 'next/image';
 
 export type Work = {

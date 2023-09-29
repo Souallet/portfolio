@@ -6,29 +6,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Section, SectionTitle } from '@/components/ui/section';
-
-const educations = [
-  {
-    school: 'Infosup',
-    degree: 'Brevet Technicien Supérieur',
-    name: 'Services Informatiques aux Organisations',
-    specialisation: 'Solutions Logicielles et Applications Métiers',
-    location: 'Paris, France',
-    startedAt: '2015',
-    endedAt: '2017',
-    description: '',
-  },
-  {
-    school: 'Ynov Informatique',
-    degree: 'Mastère',
-    name: "Expert Développement Web et Systèmes d'Information",
-    specialisation: '',
-    location: 'Nanterre, France',
-    startedAt: '2018',
-    endedAt: '2020',
-    description: '',
-  },
-];
+import { educations } from '@/data/educations';
 
 export default function EducationsSection() {
   return (

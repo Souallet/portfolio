@@ -8,7 +8,7 @@ import {
 } from '@/images/programming';
 import OltFinances from '@/images/projects/olt-finances.png';
 
-import { type Work } from '@/types/work';
+import { type Work } from '@/types/Work';
 
 export const works: Work[] = [
   {
