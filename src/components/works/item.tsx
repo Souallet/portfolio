@@ -12,8 +12,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Techonology } from '@/types/technology';
-import { Work } from '@/types/work';
+import { Techonology } from '@/types/Technology';
+import { Work } from '@/types/Work';
 
 type Props = {
   work: Work;
