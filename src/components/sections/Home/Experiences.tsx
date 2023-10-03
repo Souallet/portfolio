@@ -2,7 +2,6 @@ import Image from 'next/image';
 
 import {
   Section,
-  SectionBadge,
   SectionDescription,
   SectionTitle,
 } from '@/components/ui/section';
@@ -24,7 +23,6 @@ export default function ExperiencesSection() {
 
   return (
     <Section>
-      <SectionBadge>Expériences</SectionBadge>
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
       <SectionDescription>{`J'ai eu l'opportunité de les accompagner dans la réalisation de leurs projets.`}</SectionDescription>
       <div className="flex flex-wrap gap-8 md:gap-12 justify-between items-center">

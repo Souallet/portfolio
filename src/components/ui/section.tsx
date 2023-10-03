@@ -1,13 +1,23 @@
 import React from 'react';
 
-import { Badge } from '@/components/ui/badge';
+import { badgeVariants } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 const SectionBadge = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }) => (
-  <Badge className={cn('mb-4', className)} variant="outline" {...props} />
+>(({ className, ...props }, ref) => (
+  <div
+    className={cn(
+      'mb-4',
+      badgeVariants({
+        variant: 'outline',
+      }),
+      className
+    )}
+    {...props}
+    ref={ref}
+  />
 ));
 SectionBadge.displayName = 'SectionBadge';
 
@@ -17,7 +27,7 @@ const SectionTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h2
     ref={ref}
-    className={cn('text-3xl tracking-wide font-bold mb-8', className)}
+    className={cn('text-3xl tracking-wide font-bold mb-4', className)}
     {...props}
   />
 ));

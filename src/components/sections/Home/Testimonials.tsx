@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/card';
 import {
   Section,
-  SectionBadge,
   SectionDescription,
   SectionTitle,
 } from '@/components/ui/section';
@@ -20,7 +19,6 @@ import { useCallback, useState } from 'react';
 export default function TestimonialsSection() {
   return (
     <Section>
-      <SectionBadge>Témoignages</SectionBadge>
       <SectionTitle>Leurs avis</SectionTitle>
       <SectionDescription>{`Ce qu'ils ont pensé de notre collaboration`}</SectionDescription>
 

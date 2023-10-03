@@ -24,8 +24,7 @@ export default function WorksItem({ work }: Props) {
   return (
     <Card className="h-full flex flex-col justify-between ">
       <CardHeader>
-        <CardTitle>{work.name}</CardTitle>
-        <CardDescription className="pt-4">{work.description}</CardDescription>
+        <CardTitle className="mb-6">{work.name}</CardTitle>
         {work?.image && (
           <AspectRatio ratio={16 / 9} className="max-h-[10px]">
             <Image
@@ -35,6 +34,7 @@ export default function WorksItem({ work }: Props) {
             />
           </AspectRatio>
         )}
+        <CardDescription className="m-0">{work.description}</CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-between">
         <div className="flex flex-wrap items-end gap-2 lg:gap-4">
@@ -42,6 +42,7 @@ export default function WorksItem({ work }: Props) {
             <Badge
               className="p-2 px-3 flex gap-2 uppercase items-end"
               variant="secondary"
+              key={i}
             >
               <Image
                 key={i}
