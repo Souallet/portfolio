@@ -15,11 +15,23 @@ import {
   CardTitle,
 } from '@ui/card';
 
-type Props = {
-  work: Work;
-};
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
-export default function WorksItem({ work }: Props) {
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+
+import { cn } from '@/lib/utils';
+
+export default function WorksItem({ work }: { work: Work }) {
   const previewIsDisabled = !work.links.preview;
   return (
     <Card className="h-full flex flex-col justify-between ">
@@ -36,47 +48,80 @@ export default function WorksItem({ work }: Props) {
         )}
         <CardDescription className="m-0">{work.description}</CardDescription>
       </CardHeader>
-      <CardFooter className="flex justify-between">
-        <div className="flex flex-wrap items-end gap-2 lg:gap-4">
-          {work.technologies.map((t: Techonology, i) => (
-            <Badge
-              className="p-2 px-3 flex gap-2 uppercase items-end"
-              variant="secondary"
-              key={i}
+      <CardFooter className="flex justify-between items-start">
+        <Accordion type="single" collapsible className="w-full mr-6">
+          <AccordionItem value="technologies" className="border-none">
+            <AccordionTrigger
+              className={cn(
+                buttonVariants({ variant: 'secondary' }),
+                'justify-between hover:no-underline'
+              )}
             >
-              <Image
-                key={i}
-                src={t.image}
-                alt={`${t.name} Icon`}
-                className="h-4 w-4"
-              />
-              <span className="font-medium">{t.name}</span>
-            </Badge>
-          ))}
-        </div>
-        <div className="flex items-center gap-2 lg:gap-4">
+              Technologies employées
+            </AccordionTrigger>
+            <AccordionContent className="mt-4">
+              <div className="flex flex-wrap items-end gap-2 lg:gap-4">
+                {work.technologies.map((t: Techonology, i) => (
+                  <Badge
+                    className="p-2 px-3 flex gap-2 uppercase items-end"
+                    variant="secondary"
+                    key={i}
+                  >
+                    <Image
+                      key={i}
+                      src={t.image}
+                      alt={`${t.name} Icon`}
+                      className="h-4 w-4"
+                    />
+                    <span className="font-medium">{t.name}</span>
+                  </Badge>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+        <div className="flex items-center gap-2 lg:gap-4 ">
           {!previewIsDisabled && (
-            <a
-              className={buttonVariants({
-                size: 'icon',
-                variant: 'ghost',
-              })}
-              href={work.links.preview}
-              target="_blank"
-            >
-              <Icons.eye className="h-6 w-6" />
-            </a>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <a
+                    className={buttonVariants({
+                      size: 'icon',
+                      variant: 'ghost',
+                    })}
+                    href={work.links.preview}
+                    target="_blank"
+                  >
+                    <Icons.eye className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Prévisualiser le projet</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           )}
-          <a
-            className={buttonVariants({
-              size: 'icon',
-              variant: 'ghost',
-            })}
-            href={work.links.sourceCode}
-            target="_blank"
-          >
-            <Icons.github className="h-5 w-5" />
-          </a>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <a
+                  className={buttonVariants({
+                    size: 'icon',
+                    variant: 'ghost',
+                  })}
+                  href={work.links.sourceCode}
+                  target="_blank"
+                >
+                  <Icons.github className="h-5 w-5" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Afficher le code source</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </CardFooter>
     </Card>
