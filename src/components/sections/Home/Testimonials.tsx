@@ -1,4 +1,5 @@
-import { Button } from '@/components/ui/button';
+import { testimonials } from '@/data/testimonials';
+import { Button } from '@ui/button';
 import {
   Card,
   CardContent,
@@ -6,13 +7,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import {
-  Section,
-  SectionDescription,
-  SectionTitle,
-} from '@/components/ui/section';
-import { testimonials } from '@/data/testimonials';
+} from '@ui/card';
+import { Section, SectionDescription, SectionTitle } from '@ui/section';
 import { cx } from 'class-variance-authority';
 import { useCallback, useState } from 'react';
 

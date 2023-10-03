@@ -5,8 +5,8 @@ import {
   Nextjs,
   Nodejs,
   React,
-} from '@/images/programming';
-import OltFinances from '@/images/projects/olt-finances.png';
+} from '@images/programming';
+import OltFinances from '@images/projects/olt-finances.png';
 
 import { type Work } from '@/types/Work';
 

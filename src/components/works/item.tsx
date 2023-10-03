@@ -1,19 +1,19 @@
 import Image from 'next/image';
 
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '@ui/badge';
 
 import { Icons } from '@/components/icons';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { buttonVariants } from '@/components/ui/button';
+import { Techonology } from '@/types/Technology';
+import { Work } from '@/types/Work';
+import { AspectRatio } from '@ui/aspect-ratio';
+import { buttonVariants } from '@ui/button';
 import {
   Card,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Techonology } from '@/types/Technology';
-import { Work } from '@/types/Work';
+} from '@ui/card';
 
 type Props = {
   work: Work;

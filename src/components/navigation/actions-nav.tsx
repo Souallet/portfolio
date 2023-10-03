@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import { Icons } from '@/components/icons';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { buttonVariants } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
+import { buttonVariants } from '@ui/button';
 
 export function ActionsNav() {
   return (

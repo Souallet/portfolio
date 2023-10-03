@@ -4,8 +4,6 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 
-import { Section, SectionTitle } from '@/components/ui/section';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   Angular,
   Css,
@@ -25,7 +23,9 @@ import {
   Symfony,
   Typescript,
   VSCode,
-} from '@/images/programming';
+} from '@images/programming';
+import { Section, SectionTitle } from '@ui/section';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@ui/tabs';
 
 export default function SkillsSection() {
   let [categories] = useState({

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { badgeVariants } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { badgeVariants } from '@ui/badge';
 
 const SectionBadge = React.forwardRef<
   HTMLDivElement,

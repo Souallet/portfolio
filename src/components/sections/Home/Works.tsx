@@ -1,6 +1,6 @@
-import { Section, SectionTitle } from '@/components/ui/section';
 import { WorksItem } from '@/components/works';
 import { works } from '@/data/works';
+import { Section, SectionTitle } from '@ui/section';
 
 export default function WorksSection() {
   return (

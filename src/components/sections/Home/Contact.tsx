@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
-import { Section, SectionTitle } from '@/components/ui/section';
 import { siteConfig } from '@/config/site';
+import { Button } from '@ui/button';
+import { Section, SectionTitle } from '@ui/section';
 import { useRouter } from 'next/navigation';
 
 export default function ContactSection() {

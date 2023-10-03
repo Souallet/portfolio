@@ -1,10 +1,6 @@
 import Image from 'next/image';
 
-import {
-  Section,
-  SectionDescription,
-  SectionTitle,
-} from '@/components/ui/section';
+import { Section, SectionDescription, SectionTitle } from '@ui/section';
 
 import { companies } from '@/data/companies';
 import { cx } from 'class-variance-authority';

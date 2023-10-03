@@ -1,12 +1,8 @@
 import { Icons } from '@/components/icons';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
-import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 import { NavItem } from '@/types/nav';
+import { Popover, PopoverContent, PopoverTrigger } from '@ui/popover';
+import { Separator } from '@ui/separator';
 import Link from 'next/link';
 
 interface MobileNavProps {

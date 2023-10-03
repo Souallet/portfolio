@@ -1,6 +1,6 @@
 import AvailibilityStatus from '@/components/availibility-status';
 import { siteConfig } from '@/config/site';
-import InovationIllustration from '@/images/innovation-bro.svg';
+import InovationIllustration from '@images/innovation-bro.svg';
 import Image from 'next/image';
 
 export default function HeroSection() {

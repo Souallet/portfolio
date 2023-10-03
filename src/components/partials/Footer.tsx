@@ -1,7 +1,7 @@
 import { Icons } from '@/components/icons';
-import { buttonVariants } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { siteConfig } from '@/config/site';
+import { buttonVariants } from '@ui/button';
+import { Card } from '@ui/card';
 import Link from 'next/link';
 
 export default function Footer() {

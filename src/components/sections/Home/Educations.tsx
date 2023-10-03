@@ -1,12 +1,12 @@
+import { educations } from '@/data/educations';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Section, SectionTitle } from '@/components/ui/section';
-import { educations } from '@/data/educations';
+} from '@ui/card';
+import { Section, SectionTitle } from '@ui/section';
 
 export default function EducationsSection() {
   return (
