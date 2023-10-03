@@ -11,9 +11,9 @@ export default function HeroSection() {
           <p className="uppercase font-extrabold tracking-wider text-muted-foreground">
             Bienvenue sur mon portfolio !
           </p>
-          <h1 className="text-5xl font-bold tracking-tighter">
+          <h1 className="text-5xl font-bold tracking-tighter space-x-2">
             {`Moi, c'est Sébastien`}
-            <span className="ml-2 animate-waving-hand">👋🏻</span>
+            <span className="inline-block animate-wave">👋🏻</span>
           </h1>
         </div>
         <p className="md:text-xl">
