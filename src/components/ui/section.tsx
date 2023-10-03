@@ -27,7 +27,7 @@ const SectionTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h2
     ref={ref}
-    className={cn('text-3xl tracking-wide font-bold mb-4', className)}
+    className={cn('text-3xl tracking-wide font-bold', className)}
     {...props}
   />
 ));
@@ -39,7 +39,7 @@ const SectionDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn('mb-10 text-md text-muted-foreground', className)}
+    className={cn('text-md text-muted-foreground', className)}
     {...props}
   />
 ));
@@ -49,7 +49,13 @@ const Section = React.forwardRef<
   HTMLElement,
   React.HTMLAttributes<HTMLElement>
 >(({ className, ...props }, ref) => {
-  return <section className={cn('my-24', className)} ref={ref} {...props} />;
+  return (
+    <section
+      className={cn('my-24 flex flex-col gap-8', className)}
+      ref={ref}
+      {...props}
+    />
+  );
 });
 Section.displayName = 'Section';
 
