@@ -12,6 +12,16 @@ export const educations: Education[] = [
     description: '',
   },
   {
+    school: 'Ingésup',
+    degree: 'Bachelor',
+    name: "Informatique et systèmes d'information",
+    specialisation: 'Développement logiciel',
+    location: 'Paris, France',
+    startedAt: '2017',
+    endedAt: '2018',
+    description: '',
+  },
+  {
     school: 'Ynov Informatique',
     degree: 'Mastère',
     name: "Expert Développement Web et Systèmes d'Information",
