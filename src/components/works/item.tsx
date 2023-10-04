@@ -34,7 +34,7 @@ import { cn } from '@/lib/utils';
 export default function WorksItem({ work }: { work: Work }) {
   const previewIsDisabled = !work.links.preview;
   return (
-    <Card className="h-full flex flex-col justify-between ">
+    <Card className="h-full flex flex-col justify-between">
       <CardHeader>
         <CardTitle className="mb-6">{work.name}</CardTitle>
         {work?.image && (

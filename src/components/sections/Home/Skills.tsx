@@ -1,144 +1,56 @@
-'use client';
-
-import { useState } from 'react';
-
+import CircleSkills from '@/components/skills/circle';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { getSkillsByCategory } from '@/data/skills';
+import { Section, SectionTitle } from '@ui/section';
 import Image from 'next/image';
 
-import {
-  Angular,
-  Css,
-  Docker,
-  Express,
-  Git,
-  Html,
-  Javascript,
-  MongoDB,
-  MySQL,
-  Netlify,
-  Nextjs,
-  Nodejs,
-  PHP,
-  React,
-  Sass,
-  Symfony,
-  Typescript,
-  VSCode,
-} from '@images/programming';
-import { Section, SectionTitle } from '@ui/section';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@ui/tabs';
-
 export default function SkillsSection() {
-  let [categories] = useState({
-    Basics: [
-      {
-        name: 'HTML',
-        image: Html,
-      },
-      {
-        name: 'CSS',
-        image: Css,
-      },
-      {
-        name: 'JavaScript',
-        image: Javascript,
-      },
-      {
-        name: 'TypeScript',
-        image: Typescript,
-      },
-    ],
-    Front: [
-      {
-        name: 'Angular',
-        image: Angular,
-      },
-      {
-        name: 'React.js',
-        image: React,
-      },
-      {
-        name: 'Next.js',
-        image: Nextjs,
-      },
-      {
-        name: 'Sass',
-        image: Sass,
-      },
-    ],
-    Back: [
-      {
-        name: 'PHP',
-        image: PHP,
-      },
-      {
-        name: 'Symfony',
-        image: Symfony,
-      },
-      {
-        name: 'NodeJS',
-        image: Nodejs,
-      },
-      {
-        name: 'Express',
-        image: Express,
-      },
-      {
-        name: 'MySQL',
-        image: MySQL,
-      },
-      {
-        name: 'MongoDB',
-        image: MongoDB,
-      },
-    ],
-    Toolsbox: [
-      {
-        name: 'VS Code',
-        image: VSCode,
-      },
-      {
-        name: 'Docker',
-        image: Docker,
-      },
-      {
-        name: 'Git',
-        image: Git,
-      },
-      {
-        name: 'Netlify',
-        image: Netlify,
-      },
-    ],
-    Softskills: [],
-  });
+  const frontendSkills = getSkillsByCategory('frontend');
+  const backendSkills = getSkillsByCategory('backend');
+  const tools = getSkillsByCategory('tools');
+  const others = getSkillsByCategory('others');
 
   return (
     <Section>
       <SectionTitle>{`Compétences`}</SectionTitle>
+      <div className="grid grid-cols-2 gap-y-12 mt-10">
+        <CircleSkills
+          title="frontend"
+          skills={frontendSkills}
+          className="col-span-1 mx-auto"
+        />
+        <CircleSkills
+          title="backend"
+          skills={backendSkills}
+          className="col-span-1 mx-auto"
+        />
 
-      <Tabs defaultValue="0">
-        <TabsList>
-          {Object.keys(categories).map((category, i) => (
-            <TabsTrigger key={category} value={`${i}`}>
-              {category}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+        <div className="col-span-2 grid items-center">
+          <CircleSkills
+            title="Mes outils"
+            skills={tools}
+            className="col-span-1 mx-auto"
+          />
+        </div>
 
-        {Object.values(categories).map((technologies, i) => (
-          <TabsContent value={`${i}`} key={i}>
-            <ul className="flex flex-row flex-wrap items-center gap-4 py-4">
-              {technologies.map((t) => (
-                <li key={t.name} className="relative rounded-md">
-                  <div className="flex justify-center items-center h-24 w-24 p-4">
-                    <Image src={t.image} alt={`Logo ${t.name}`} className="" />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </TabsContent>
-        ))}
-      </Tabs>
+        <Card className="col-span-2 mt-8">
+          <CardHeader>
+            <CardTitle className="text-xl text-center">
+              J'ai également travaillé avec ces technologies
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-wrap justify-evenly gap-8">
+            {others.map((skill, i) => (
+              <div
+                key={i}
+                className="p-4 bg-secondary rounded-full h-20 w-20 grid items-center"
+              >
+                <Image alt={skill.name} src={skill.image} />
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      </div>
     </Section>
   );
 }
