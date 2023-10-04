@@ -6,13 +6,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@ui/card';
-import { Section, SectionTitle } from '@ui/section';
+import { Section, SectionContent, SectionTitle } from '@ui/section';
 
 export default function EducationsSection() {
   return (
     <Section>
       <SectionTitle>{`Mes Formations`}</SectionTitle>
-      <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+      <SectionContent className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {educations.map((e, i) => (
           <Card key={i} className="col-span-1 flex flex-col justify-between">
             <CardHeader className="flex flex-col gap-2">
@@ -25,7 +25,7 @@ export default function EducationsSection() {
             </CardContent>
           </Card>
         ))}
-      </div>
+      </SectionContent>
     </Section>
   );
 }

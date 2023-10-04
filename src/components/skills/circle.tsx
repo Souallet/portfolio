@@ -16,8 +16,8 @@ export default function CircleSkills({
 }: CircleProps) {
   const renderImages = () => {
     const div = 360 / skills.length;
-    var radius = 175;
-    var offsetToParentCenter = 350 / 2;
+    var radius = 160;
+    var offsetToParentCenter = 320 / 2;
     var offsetToChildCenter = 96 / 2;
     var totalOffset = offsetToParentCenter - offsetToChildCenter;
 
@@ -42,12 +42,14 @@ export default function CircleSkills({
   return (
     <Card
       className={cn(
-        'relative grid items-center rounded-full w-[350px] h-[350px]',
+        'relative grid items-center rounded-full w-[320px] h-[320px]',
         className
       )}
     >
       <CardHeader>
-        <CardTitle className="uppercase text-center">{title}</CardTitle>
+        <CardTitle className="uppercase font-extrabold tracking-wider text-muted-foreground text-center text-xl">
+          {title}
+        </CardTitle>
       </CardHeader>
       <CardContent className="absolute top-0 left-0 w-full h-full p-0">
         {renderImages()}

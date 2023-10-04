@@ -1,6 +1,6 @@
 import { siteConfig } from '@/config/site';
 import { Button } from '@ui/button';
-import { Section, SectionTitle } from '@ui/section';
+import { Section, SectionDescription, SectionTitle } from '@ui/section';
 import { useRouter } from 'next/navigation';
 
 export default function ContactSection() {
@@ -13,12 +13,12 @@ export default function ContactSection() {
   return (
     <Section>
       <SectionTitle>{`Restons en contact`}</SectionTitle>
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <p className="text-lg md:text-md lg:text-xl xl:text-2xl dark:text-zinc-100">
-          {`Une idée en tête ? Parlons en !`}
+      <SectionDescription className="flex flex-wrap items-center justify-between">
+        <p className="text-lg md:text-md lg:text-xl xl:text-2xl">
+          Une idée en tête ? Parlons en !
         </p>
         <Button onClick={redirectToMailTo}>Envoyez-moi un mail !</Button>
-      </div>
+      </SectionDescription>
     </Section>
   );
 }

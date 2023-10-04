@@ -1,7 +1,12 @@
 import CircleSkills from '@/components/skills/circle';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getSkillsByCategory } from '@/data/skills';
-import { Section, SectionTitle } from '@ui/section';
+import {
+  Section,
+  SectionContent,
+  SectionDescription,
+  SectionTitle,
+} from '@ui/section';
 import Image from 'next/image';
 
 export default function SkillsSection() {
@@ -13,19 +18,22 @@ export default function SkillsSection() {
   return (
     <Section>
       <SectionTitle>{`Compétences`}</SectionTitle>
-      <div className="grid grid-cols-2 gap-y-12 mt-10">
+      <SectionDescription>
+        Un apperçu non exhaustif de mes compétences et technologies favorites
+      </SectionDescription>
+      <SectionContent className="grid grid-cols-2 mt-12 gap-y-12 xl:grid-cols-3 xl:gap-y-8">
         <CircleSkills
           title="frontend"
           skills={frontendSkills}
-          className="col-span-1 mx-auto"
+          className="col-span-2 md:col-span-1 mx-auto mb-12"
         />
         <CircleSkills
           title="backend"
           skills={backendSkills}
-          className="col-span-1 mx-auto"
+          className="col-span-2 md:col-span-1 mx-auto mb-12"
         />
 
-        <div className="col-span-2 grid items-center">
+        <div className="col-span-2 xl:col-span-1 grid items-center">
           <CircleSkills
             title="Mes outils"
             skills={tools}
@@ -33,9 +41,9 @@ export default function SkillsSection() {
           />
         </div>
 
-        <Card className="col-span-2 mt-8">
+        <Card className="col-span-2 xl:col-span-3 mt-8">
           <CardHeader>
-            <CardTitle className="text-xl text-center">
+            <CardTitle className="font-extrabold tracking-wider text-muted-foreground text-center text-xl">
               J'ai également travaillé avec ces technologies
             </CardTitle>
           </CardHeader>
@@ -50,7 +58,7 @@ export default function SkillsSection() {
             ))}
           </CardContent>
         </Card>
-      </div>
+      </SectionContent>
     </Section>
   );
 }

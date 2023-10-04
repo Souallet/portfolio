@@ -51,7 +51,7 @@ const Section = React.forwardRef<
 >(({ className, ...props }, ref) => {
   return (
     <section
-      className={cn('my-24 flex flex-col gap-8', className)}
+      className={cn('my-28 flex flex-col gap-4', className)}
       ref={ref}
       {...props}
     />
@@ -59,4 +59,18 @@ const Section = React.forwardRef<
 });
 Section.displayName = 'Section';
 
-export { Section, SectionTitle, SectionDescription, SectionBadge };
+const SectionContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn('mt-8', className)} {...props} />
+));
+SectionContent.displayName = 'SectionContent';
+
+export {
+  Section,
+  SectionTitle,
+  SectionDescription,
+  SectionBadge,
+  SectionContent,
+};
