@@ -14,9 +14,9 @@ export default function ContactSection() {
     <Section>
       <SectionTitle>{`Restons en contact`}</SectionTitle>
       <SectionDescription className="flex flex-wrap items-center justify-between">
-        <p className="text-lg md:text-md lg:text-xl xl:text-2xl">
+        <span className="text-lg md:text-md lg:text-xl xl:text-2xl">
           Une idée en tête ? Parlons en !
-        </p>
+        </span>
         <Button onClick={redirectToMailTo}>Envoyez-moi un mail !</Button>
       </SectionDescription>
     </Section>
