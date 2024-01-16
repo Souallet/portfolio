@@ -4,7 +4,10 @@ import { StaticImageData } from 'next/image';
 export type Work = {
   name: string;
   description: string;
-  image?: string | StaticImageData;
+  image?: {
+    light: string | StaticImageData;
+    dark: string | StaticImageData;
+  };
   links: {
     preview: string;
     sourceCode: string;

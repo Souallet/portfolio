@@ -6,7 +6,8 @@ import {
   Nodejs,
   React,
 } from '@images/programming';
-import OltFinances from '@images/projects/olt-finances.png';
+import OltFinancesDark from '@images/projects/olt-finances-dark.png';
+import OltFinancesLight from '@images/projects/olt-finances-light.png';
 
 import { type Work } from '@/types/Work';
 
@@ -15,7 +16,10 @@ export const works: Work[] = [
     name: 'OLT Finances',
     description:
       "Dashboard permettant d'analyser la situation financière d'une entreprise dont le compte bancaire est chez Tiime. Il suffit d'importer un fichier au format .xlsx pour en extraire les informations clés des finances de l'entreprise.",
-    image: OltFinances,
+    image: {
+      light: OltFinancesLight,
+      dark: OltFinancesDark,
+    },
     links: {
       preview: 'https://olt-finances.vercel.app',
       sourceCode: 'https://github.com/Souallet/olt-finances',

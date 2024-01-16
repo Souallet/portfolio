@@ -40,9 +40,14 @@ export default function WorksItem({ work }: { work: Work }) {
         {work?.image && (
           <AspectRatio ratio={16 / 9} className="max-h-[10px]">
             <Image
-              src={work.image}
+              src={work.image.light}
               alt={`${work.name} illustration`}
-              className="rounded-3xl "
+              className="rounded-3xl block dark:hidden"
+            />
+            <Image
+              src={work.image.dark}
+              alt={`${work.name} illustration`}
+              className="rounded-3xl hidden dark:block"
             />
           </AspectRatio>
         )}
