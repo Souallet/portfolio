@@ -21,23 +21,20 @@ export default function SkillsSection() {
       <SectionDescription>
         Un apperçu non exhaustif de mes compétences et technologies favorites
       </SectionDescription>
-      <SectionContent className="grid grid-cols-2 mt-12 gap-y-12 xl:grid-cols-3 xl:gap-y-8">
-        <CircleSkills
-          title="frontend"
-          skills={frontendSkills}
-          className="col-span-2 md:col-span-1 mx-auto mb-12"
-        />
-        <CircleSkills
-          title="backend"
-          skills={backendSkills}
-          className="col-span-2 md:col-span-1 mx-auto mb-12"
-        />
 
-        <div className="col-span-2 xl:col-span-1 grid items-center">
+      <SectionContent className="grid grid-cols-1 mt-12 gap-y-12 md:grid-cols-2 md:gap-y-24 xl:grid-cols-3 xl:gap-y-8">
+        <div className="col-span-2 md:col-span-1 mx-auto mb-12">
+          <CircleSkills title="frontend" skills={frontendSkills} />
+        </div>
+        <div className="flex items-center justify-center col-span-2 md:col-span-1 mx-auto mb-12 md:row-span-2 xl:row-span-1 ">
+          <CircleSkills title="backend" skills={backendSkills} />
+        </div>
+
+        <div className="col-span-2 md:col-span-1 max-lg:grid items-center">
           <CircleSkills
             title="Mes outils"
             skills={tools}
-            className="col-span-1 mx-auto"
+            className="col-span-2 mx-auto"
           />
         </div>
 
