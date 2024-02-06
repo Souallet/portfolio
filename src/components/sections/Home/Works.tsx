@@ -9,9 +9,9 @@ import {
 
 export default function WorksSection() {
   return (
-    <Section>
+    <Section id="realisations">
       <SectionTitle>{`Mes réalisations`}</SectionTitle>
-      <SectionDescription>{`Découvrez quelques un de mes projets personnels`}</SectionDescription>
+      <SectionDescription>{`Découvrez quelques un de mes projets`}</SectionDescription>
       <SectionContent className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="col-span-1">
           <WorksItem work={works[0]} />

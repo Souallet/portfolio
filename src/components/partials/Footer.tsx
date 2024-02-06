@@ -1,19 +1,26 @@
+'use client';
+import Link from 'next/link';
+
 import { Icons } from '@/components/icons';
 import { siteConfig } from '@/config/site';
+import { scrolltoHash } from '@/lib/scroll';
 import { buttonVariants } from '@ui/button';
 import { Card } from '@ui/card';
-import Link from 'next/link';
 
 export default function Footer() {
   const renderNav = () => {
     return siteConfig.navigation.map((link, i) => (
-      <a
+      <Link
         key={i}
         className="mx-2 opacity-50 transition-opacity duration-200 ease-in-out hover:opacity-100"
-        href={link.href}
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          scrolltoHash(link.href ?? '');
+        }}
       >
         {link.title}
-      </a>
+      </Link>
     ));
   };
 

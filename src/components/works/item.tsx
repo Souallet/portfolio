@@ -16,20 +16,11 @@ import {
 } from '@ui/card';
 
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
-
-import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-
-import { cn } from '@/lib/utils';
 
 export default function WorksItem({ work }: { work: Work }) {
   const previewIsDisabled = !work.links.preview;
@@ -54,37 +45,25 @@ export default function WorksItem({ work }: { work: Work }) {
         <CardDescription className="m-0">{work.description}</CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-between items-start">
-        <Accordion type="single" collapsible className="w-full mr-6">
-          <AccordionItem value="technologies" className="border-none">
-            <AccordionTrigger
-              className={cn(
-                buttonVariants({ variant: 'secondary' }),
-                'justify-between hover:no-underline'
-              )}
+        <div className="flex flex-wrap items-end gap-2 lg:gap-4">
+          {work.technologies.map((t: Techonology, i) => (
+            <Badge
+              className="p-2 px-3 flex gap-2 uppercase items-end"
+              variant="secondary"
+              key={i}
             >
-              Technologies employées
-            </AccordionTrigger>
-            <AccordionContent className="mt-4">
-              <div className="flex flex-wrap items-end gap-2 lg:gap-4">
-                {work.technologies.map((t: Techonology, i) => (
-                  <Badge
-                    className="p-2 px-3 flex gap-2 uppercase items-end"
-                    variant="secondary"
-                    key={i}
-                  >
-                    <Image
-                      key={i}
-                      src={t.image}
-                      alt={`${t.name} Icon`}
-                      className="h-4 w-4"
-                    />
-                    <span className="font-medium">{t.name}</span>
-                  </Badge>
-                ))}
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+              {/* <Image
+                key={i}
+                src={t.image}
+                alt={`${t.name} Icon`}
+                className="h-4 w-4"
+              /> */}
+              <span className="text-xs font-medium text-muted-foreground">
+                {t.name}
+              </span>
+            </Badge>
+          ))}
+        </div>
 
         <div className="flex items-center gap-2 lg:gap-4 ">
           {!previewIsDisabled && (

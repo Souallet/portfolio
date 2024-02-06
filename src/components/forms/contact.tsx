@@ -46,7 +46,7 @@ export default function ContactForm() {
   return (
     <Form {...form}>
       <form
-        className="grid gap-6 grid-cols-1 md:grid-cols-2 max-w-[750px]"
+        className="grid gap-6 grid-cols-1 md:grid-cols-2 max-w-[750px] w-full"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <FormField
@@ -54,7 +54,7 @@ export default function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem className="flex flex-col col-span-1">
-              <FormLabel>Votre nom</FormLabel>
+              <FormLabel className="text-primary mb-2">Votre nom</FormLabel>
               <FormControl>
                 <Input placeholder="Sébastien O." {...field} />
               </FormControl>
@@ -68,7 +68,9 @@ export default function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem className="flex flex-col col-span-1">
-              <FormLabel>Votre address e-mail</FormLabel>
+              <FormLabel className="text-primary mb-2">
+                Votre address e-mail
+              </FormLabel>
               <FormControl>
                 <Input placeholder="sebastien.o@email.com" {...field} />
               </FormControl>
@@ -82,7 +84,9 @@ export default function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem className="flex flex-col md:col-span-2">
-              <FormLabel>Le sujet de votre message</FormLabel>
+              <FormLabel className="text-primary mb-2">
+                Le sujet de votre message
+              </FormLabel>
               <FormControl>
                 <Input
                   placeholder="Création de site web, développement de plugin, etc..."
@@ -99,11 +103,12 @@ export default function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem className="flex flex-col md:col-span-2">
-              <FormLabel>Votre message</FormLabel>
+              <FormLabel className="text-primary mb-2">Votre message</FormLabel>
               <FormControl>
                 <Textarea
                   className=""
                   placeholder="Je vous contacte pour ..."
+                  rows={5}
                   {...field}
                 />
               </FormControl>

@@ -6,31 +6,31 @@ export const siteConfig = {
   available: false,
   navigation: [
     {
-      href: '/',
+      href: 'realisations',
       title: 'Réalisations',
       disabled: false,
       external: false,
     },
     {
-      href: '/',
+      href: 'formations',
       title: 'Formations',
       disabled: false,
       external: false,
     },
     {
-      href: '/',
+      href: 'competences',
       title: 'Compétences',
       disabled: false,
       external: false,
     },
     {
-      href: '/',
+      href: 'experiences',
       title: 'Expériences',
       disabled: false,
       external: false,
     },
     {
-      href: '/',
+      href: 'contact',
       title: 'Contact',
       disabled: false,
       external: false,

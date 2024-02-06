@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
     <Section>
       <SectionTitle>Leurs avis</SectionTitle>
       <SectionDescription>{`Ce qu'ils ont pensé de notre collaboration`}</SectionDescription>
-      <SectionContent className="grid grid-cols-2 gap-8 items-baseline">
+      <SectionContent className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-baseline">
         <div className="grid gap-8">
           <Testimonial testimonial={testimonials[0]} />
           <Testimonial testimonial={testimonials[1]} />

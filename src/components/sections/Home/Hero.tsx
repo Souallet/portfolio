@@ -13,7 +13,7 @@ export default function HeroSection() {
           </p>
           <h1 className="text-5xl font-bold tracking-tighter space-x-2">
             {`Moi, c'est Sébastien`}
-            <span className="inline-block animate-wave">👋🏻</span>
+            {/* <span className="inline-block animate-wave">👋🏻</span> */}
           </h1>
         </div>
         <p className="md:text-xl">
@@ -29,7 +29,7 @@ export default function HeroSection() {
         alt="Innovation Illustration"
         src={InovationIllustration}
         priority={false}
-        className="hidden md:block md:max-w-xs lg: lg:max-w-none"
+        className="hidden md:block md:max-w-xs lg:max-w-none"
       />
     </section>
   );

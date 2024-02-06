@@ -10,7 +10,7 @@ import { Section, SectionContent, SectionTitle } from '@ui/section';
 
 export default function EducationsSection() {
   return (
-    <Section>
+    <Section id="formations">
       <SectionTitle>{`Mes Formations`}</SectionTitle>
       <SectionContent className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {educations.map((e, i) => (

@@ -1,5 +1,7 @@
+'use client';
 import Link from 'next/link';
 
+import { scrolltoHash } from '@/lib/scroll';
 import { cn } from '@/lib/utils';
 import { NavItem } from '@/types/nav';
 
@@ -17,7 +19,11 @@ export function MainNav({ items }: MainNavProps) {
               item.href && (
                 <Link
                   key={index}
-                  href={item.href}
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrolltoHash(item.href ?? '');
+                  }}
                   className={cn(
                     'transition-colors hover:text-foreground text-foreground/70',
                     item.disabled && 'cursor-not-allowed opacity-80'

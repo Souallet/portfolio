@@ -23,7 +23,7 @@ export default function ExperiencesSection() {
   };
 
   return (
-    <Section>
+    <Section id="experiences">
       <SectionTitle>{`Ils m'ont fait confiance`}</SectionTitle>
       <SectionDescription>{`J'ai eu l'opportunité de les accompagner dans la réalisation de leurs projets.`}</SectionDescription>
       <SectionContent className="flex flex-wrap gap-8 md:gap-12 max-lg:justify-around justify-between items-center">
