@@ -20,7 +20,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
+} from '@ui/tooltip';
 
 export default function WorksItem({ work }: { work: Work }) {
   const previewIsDisabled = !work.links.preview;

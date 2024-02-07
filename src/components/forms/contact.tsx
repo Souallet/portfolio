@@ -1,3 +1,4 @@
+import { zodResolver } from '@hookform/resolvers/zod';
 import {
   Form,
   FormControl,
@@ -5,9 +6,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui//form';
-import { Button } from '@/components/ui/button';
-import { zodResolver } from '@hookform/resolvers/zod';
+} from '@ui//form';
+import { Button } from '@ui/button';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Input } from '../ui/input';

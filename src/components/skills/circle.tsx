@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { Skill } from '@/types/Skill';
+import { Card, CardContent, CardHeader, CardTitle } from '@ui/card';
 import Image from 'next/image';
 
 type CircleProps = {
