@@ -1,3 +1,4 @@
+import { sendMail } from '@/actions/sendMail';
 import { zodResolver } from '@hookform/resolvers/zod';
 import {
   Form,
@@ -36,8 +37,10 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
-  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = (data) =>
-    console.log(data);
+  const onSubmit: SubmitHandler<z.infer<typeof formSchema>> = (data) => {
+    sendMail(data);
+    // console.log(data);
+  };
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -118,7 +121,7 @@ export default function ContactForm() {
         />
 
         <Button
-          disabled={form.formState.isSubmitSuccessful}
+          // disabled={form.formState.isSubmitSuccessful}
           variant="secondary"
           type="submit"
           className="px-12 w-fit"
