@@ -3,17 +3,18 @@ import Image from 'next/image';
 import { Badge } from '@ui/badge';
 
 import { Icons } from '@/components/icons';
-import { Techonology } from '@/types/Technology';
-import { Work } from '@/types/Work';
-import { AspectRatio } from '@ui/aspect-ratio';
-import { buttonVariants } from '@ui/button';
 import {
   Card,
+  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@ui/card';
+} from '@/components/ui/card';
+import { Techonology } from '@/types/Technology';
+import { Work } from '@/types/Work';
+import { AspectRatio } from '@ui/aspect-ratio';
+import { buttonVariants } from '@ui/button';
 
 import {
   Tooltip,
@@ -28,6 +29,8 @@ export default function WorksItem({ work }: { work: Work }) {
     <Card className="h-full flex flex-col justify-between">
       <CardHeader>
         <CardTitle className="mb-6">{work.name}</CardTitle>
+      </CardHeader>
+      <CardContent>
         {work?.image && (
           <AspectRatio ratio={16 / 9} className="max-h-[10px]">
             <Image
@@ -42,8 +45,19 @@ export default function WorksItem({ work }: { work: Work }) {
             />
           </AspectRatio>
         )}
-        <CardDescription className="m-0">{work.description}</CardDescription>
-      </CardHeader>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <CardDescription className="m-0 line-clamp-3 text-justify">
+                {work.description}
+              </CardDescription>
+              <TooltipContent className="max-w-[300px]" data-side="bottom">
+                {work.description}
+              </TooltipContent>
+            </TooltipTrigger>
+          </Tooltip>
+        </TooltipProvider>
+      </CardContent>
       <CardFooter className="flex justify-between items-start">
         <div className="flex flex-wrap items-end gap-2 lg:gap-4">
           {work.technologies.map((t: Techonology, i) => (

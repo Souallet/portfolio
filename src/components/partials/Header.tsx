@@ -2,7 +2,6 @@ import { siteConfig } from '@/config/site';
 import Link from 'next/link';
 import { ActionsNav } from '../navigation/actions-nav';
 import { MainNav } from '../navigation/main-nav';
-import MobileNav from '../navigation/mobile-navigation';
 
 export default function Header() {
   return (
@@ -16,7 +15,6 @@ export default function Header() {
           <MainNav items={siteConfig.navigation} />
         </div>
         <ActionsNav />
-        <MobileNav items={siteConfig.navigation} />
       </div>
     </header>
   );

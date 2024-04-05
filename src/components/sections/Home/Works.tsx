@@ -17,10 +17,10 @@ export default function WorksSection() {
           <WorksItem work={works[0]} />
         </div>
         <div className="col-span-1 flex flex-col gap-8">
-          <div className="h-1/2">
+          <div className="md:h-1/2">
             <WorksItem work={works[1]} />
           </div>
-          <div className="h-1/2">
+          <div className="md:h-1/2">
             <WorksItem work={works[2]} />
           </div>
         </div>

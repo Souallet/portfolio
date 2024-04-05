@@ -3,6 +3,7 @@ import { Icons } from '@/components/icons';
 import { scrolltoHash } from '@/lib/scroll';
 import { cn } from '@/lib/utils';
 import { NavItem } from '@/types/nav';
+import { Button } from '@ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@ui/popover';
 import { Separator } from '@ui/separator';
 import Link from 'next/link';
@@ -15,11 +16,13 @@ export default function MobileNav({ items }: MobileNavProps) {
   return (
     <div className="md:hidden">
       <Popover>
-        <PopoverTrigger className="flex items-center">
-          <Icons.menu />
+        <PopoverTrigger asChild>
+          <Button variant="ghost" size="icon">
+            <Icons.menu className="h-4 w-4" />
+          </Button>
         </PopoverTrigger>
 
-        <PopoverContent className="mt-4 md:hidden rounded-r-none rounded-tl-none">
+        <PopoverContent className="mt-2 md:hidden rounded-r-none rounded-tl-none">
           <nav className="flex flex-col">
             {items?.map(
               (item, index) =>

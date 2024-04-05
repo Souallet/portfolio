@@ -1,5 +1,3 @@
-import { testimonials } from '@/data/testimonials';
-import { Button } from '@ui/button';
 import {
   Card,
   CardContent,
@@ -7,7 +5,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@ui/card';
+} from '@/components/ui/card';
+import { testimonials } from '@/data/testimonials';
+import { Button } from '@ui/button';
 import {
   Section,
   SectionContent,

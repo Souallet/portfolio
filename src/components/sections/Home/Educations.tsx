@@ -1,11 +1,11 @@
-import { educations } from '@/data/educations';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@ui/card';
+} from '@/components/ui/card';
+import { educations } from '@/data/educations';
 import { Section, SectionContent, SectionTitle } from '@ui/section';
 
 export default function EducationsSection() {

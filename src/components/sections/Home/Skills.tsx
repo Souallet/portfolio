@@ -20,10 +20,14 @@ export default function SkillsSection() {
         Un apperçu non exhaustif de mes compétences et technologies favorites
       </SectionDescription>
 
-      <SectionContent className="grid grid-cols-1 mt-12 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
+      <SectionContent className="grid grid-cols-1 mt-12 gap-8 md:grid-cols-2 xl:grid-cols-3">
         <CardSkills title="frontend" skills={frontendSkills} />
         <CardSkills title="backend" skills={backendSkills} />
-        <CardSkills title="Mes outils" skills={tools} />
+        <CardSkills
+          title="Mes outils"
+          className="md:col-span-2 xl:col-span-1"
+          skills={tools}
+        />
 
         {/* <Card className="col-span-2 xl:col-span-3">
           <CardHeader>

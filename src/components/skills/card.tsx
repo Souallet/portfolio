@@ -1,6 +1,6 @@
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { Skill } from '@/types/Skill';
-import { Card, CardContent, CardHeader, CardTitle } from '@ui/card';
 import Image from 'next/image';
 
 type CircleProps = {
@@ -29,7 +29,7 @@ export default function CardSkills({
   };
 
   return (
-    <Card className={cn('flex flex-col border-none', className)}>
+    <Card className={cn('flex flex-col grow', className)}>
       <CardHeader>
         <CardTitle className="uppercase font-extrabold tracking-wider text-muted-foreground text-center text-xl">
           {title}

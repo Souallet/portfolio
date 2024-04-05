@@ -1,6 +1,6 @@
-import { ThemeProvider } from '@/app/providers';
-import Footer from '@/components/partials/footer';
-import Header from '@/components/partials/header';
+import { ThemeProvider } from '@/app/Providers';
+import Footer from '@/components/partials/Footer';
+import Header from '@/components/partials/Header';
 import { Inter } from 'next/font/google';
 import React from 'react';
 import './globals.css';

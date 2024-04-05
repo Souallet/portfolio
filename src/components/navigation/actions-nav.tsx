@@ -4,6 +4,7 @@ import { Icons } from '@/components/icons';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { siteConfig } from '@/config/site';
 import { buttonVariants } from '@ui/button';
+import MobileNav from '../navigation/mobile-navigation';
 
 export function ActionsNav() {
   return (
@@ -21,6 +22,7 @@ export function ActionsNav() {
           </div>
         </Link>
         <ThemeToggle />
+        <MobileNav items={siteConfig.navigation} />
       </nav>
     </div>
   );
