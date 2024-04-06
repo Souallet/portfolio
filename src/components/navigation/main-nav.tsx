@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
 
-import { scrolltoHash } from '@/lib/scroll';
-import { cn } from '@/lib/utils';
+import { scrolltoHash } from '@/libs/scroll';
+import { cn } from '@/libs/utils';
 import { NavItem } from '@/types/nav';
 
 interface MainNavProps {

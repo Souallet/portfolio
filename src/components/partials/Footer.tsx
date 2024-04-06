@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Icons } from '@/components/icons';
 import { Card } from '@/components/ui/card';
 import { siteConfig } from '@/config/site';
-import { scrolltoHash } from '@/lib/scroll';
+import { scrolltoHash } from '@/libs/scroll';
 import { buttonVariants } from '@ui/button';
 
 export default function Footer() {

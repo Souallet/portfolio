@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
+import { cn } from '@/libs/utils';
 import { Skill } from '@/types/Skill';
 import Image from 'next/image';
 

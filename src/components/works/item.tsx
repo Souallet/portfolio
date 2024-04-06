@@ -37,11 +37,15 @@ export default function WorksItem({ work }: { work: Work }) {
               src={work.image.light}
               alt={`${work.name} illustration`}
               className="rounded-3xl block dark:hidden"
+              priority={false}
+              sizes="(max-width: 768px) 300px, (max-width: 1200px) 50vw, 33vw"
             />
             <Image
               src={work.image.dark}
               alt={`${work.name} illustration`}
               className="rounded-3xl hidden dark:block"
+              priority={false}
+              sizes="(max-width: 768px) 300px, (max-width: 1200px) 50vw, 33vw"
             />
           </AspectRatio>
         )}

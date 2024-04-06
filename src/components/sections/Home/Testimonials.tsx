@@ -40,23 +40,20 @@ const Testimonial = ({ testimonial }: { testimonial: any }) => {
   const [shouldTruncate, setShouldTruncate] = useState<boolean>(false);
   const [readMore, setReadMore] = useState<boolean>(false);
 
-  const measuredRef = useCallback(
-    (node: any) => {
-      // Before the component mounts the node ref will be null
-      if (node?.parentElement) {
-        // Calculate the number of lines based on height
-        const elHeight = node.offsetHeight;
-        const styles = window.getComputedStyle(node);
-        const lineHeight = styles
-          .getPropertyValue('line-height')
-          .replace('px', '');
-        const elLineCount = elHeight / parseInt(lineHeight, 10);
+  const measuredRef = useCallback((node: any) => {
+    // Before the component mounts the node ref will be null
+    if (node?.parentElement) {
+      // Calculate the number of lines based on height
+      const elHeight = node.offsetHeight;
+      const styles = window.getComputedStyle(node);
+      const lineHeight = styles
+        .getPropertyValue('line-height')
+        .replace('px', '');
+      const elLineCount = elHeight / parseInt(lineHeight, 10);
 
-        setShouldTruncate(elLineCount > 3);
-      }
-    },
-    [testimonial.testimonial]
-  );
+      setShouldTruncate(elLineCount > 3);
+    }
+  }, []);
 
   return (
     <Card className="space-y-4">

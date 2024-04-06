@@ -28,7 +28,7 @@ export default function HeroSection() {
       <Image
         alt="Innovation Illustration"
         src={InovationIllustration}
-        priority={false}
+        priority={true}
         className="hidden md:block md:max-w-xs lg:max-w-none"
       />
     </section>

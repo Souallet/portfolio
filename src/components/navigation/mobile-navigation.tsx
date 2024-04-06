@@ -1,7 +1,7 @@
 'use client';
 import { Icons } from '@/components/icons';
-import { scrolltoHash } from '@/lib/scroll';
-import { cn } from '@/lib/utils';
+import { scrolltoHash } from '@/libs/scroll';
+import { cn } from '@/libs/utils';
 import { NavItem } from '@/types/nav';
 import { Button } from '@ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@ui/popover';
