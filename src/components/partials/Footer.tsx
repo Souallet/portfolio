@@ -12,7 +12,7 @@ export default function Footer() {
     return siteConfig.navigation.map((link, i) => (
       <Link
         key={i}
-        className="mx-2 opacity-50 transition-opacity duration-200 ease-in-out hover:opacity-100"
+        className="mx-2 opacity-80 transition-opacity duration-200 ease-in-out hover:opacity-100"
         href="#"
         onClick={(e) => {
           e.preventDefault();

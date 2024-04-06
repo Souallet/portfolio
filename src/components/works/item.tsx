@@ -72,9 +72,7 @@ export default function WorksItem({ work }: { work: Work }) {
                 alt={`${t.name} Icon`}
                 className="h-4 w-4"
               /> */}
-              <span className="text-xs font-medium text-muted-foreground">
-                {t.name}
-              </span>
+              <span className="text-xs font-medium ">{t.name}</span>
             </Badge>
           ))}
         </div>
@@ -91,6 +89,7 @@ export default function WorksItem({ work }: { work: Work }) {
                     })}
                     href={work.links.preview}
                     target="_blank"
+                    title={`Tester le projet ${work.name}`}
                   >
                     <Icons.eye className="h-6 w-6" />
                   </a>
@@ -111,6 +110,7 @@ export default function WorksItem({ work }: { work: Work }) {
                   })}
                   href={work.links.sourceCode}
                   target="_blank"
+                  title={`Afficher le code source pour ${work.name}`}
                 >
                   <Icons.github className="h-5 w-5" />
                 </a>

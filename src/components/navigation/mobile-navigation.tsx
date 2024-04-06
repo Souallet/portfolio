@@ -17,7 +17,11 @@ export default function MobileNav({ items }: MobileNavProps) {
     <div className="md:hidden">
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant="ghost" size="icon">
+          <Button
+            variant="ghost"
+            size="icon"
+            title="Ouvrir le menu de navigation"
+          >
             <Icons.menu className="h-4 w-4" />
           </Button>
         </PopoverTrigger>
