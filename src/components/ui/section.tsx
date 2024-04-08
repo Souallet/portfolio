@@ -51,7 +51,7 @@ const Section = React.forwardRef<
 >(({ className, ...props }, ref) => {
   return (
     <section
-      className={cn('my-28 flex flex-col gap-4', className)}
+      className={cn('max-lg:my-12 my-20 flex flex-col gap-4', className)}
       ref={ref}
       {...props}
     />
