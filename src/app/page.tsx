@@ -10,7 +10,7 @@ import WorksSection from '@/components/sections/Home/Works';
 
 const Home = () => {
   return (
-    <main className="container mx-auto">
+    <>
       <HeroSection />
       <WorksSection />
       <EducationsSection />
@@ -18,7 +18,7 @@ const Home = () => {
       <ExperiencesSection />
       <TestimonialsSection />
       <ContactSection />
-    </main>
+    </>
   );
 };
 
