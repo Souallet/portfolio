@@ -2,12 +2,22 @@ import { type Testimonial } from '@/types/Testimonial';
 
 export const testimonials: Testimonial[] = [
   {
+    firstname: 'Gaël',
+    lastname: 'Patin',
+    job_title: 'Engineering Manager',
+    company: 'Leboncoin',
+    source: 'https://www.malt.fr/profile/sebastienouallet',
+    date: new Date(2024, 4, 5),
+    testimonial: `Sébastien est venu apporter renfort à l'équipe sur un projet techniquement complexe touchant toutes les équipes du groupe (composant central). Il s'agissait de créér un nouveau module de tracking permettant de garantir la qualité des données envoyées par les hit et fournissant la meilleure DevX possible. Sébastien a su très vite entrer en matière et collaborer en bonne intelligence avec notre développeur Web. Leur collaboration a été très efficace, le module a pu être livré dans les temps sans dégrader nos attentes en terme de qualité ou fonctionnalités. Sébastien a été partie prenante de la conception et a pris à sa charge la majeur partie de l'implémentation. Les 1er retours utilisateurs étaient très positifs. Au niveau humain, Sébastien est très sympathique, il a une communication facile et pragmatique, il a participé sans souci au évènement de la vie d'équipe. Si l'occasion se présente, je ferai sans aucun doute de nouveau appel à lui.`,
+    icon: '',
+  },
+  {
     firstname: 'Valentin',
     lastname: 'Gerum',
     job_title: 'Engineering Manager',
     company: 'Leboncoin',
     source: 'https://www.malt.fr/profile/sebastienouallet',
-    date: new Date(2023, 5, 19),
+    date: new Date(2023, 9, 28),
     testimonial: `Une super collaboration avec Sebastien en charge de nous aider à faire évoluer nos parcours d'authentification. Bonne prise en main du sujet, échange fluide au sein de l'équipe et des développeurs autour de lui. Je recommande.`,
     icon: '',
   },

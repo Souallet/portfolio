@@ -26,6 +26,7 @@ export default function TestimonialsSection() {
         <div className="grid gap-8">
           <Testimonial testimonial={testimonials[0]} />
           <Testimonial testimonial={testimonials[1]} />
+          <Testimonial testimonial={testimonials[4]} />
         </div>
         <div className="grid gap-8">
           <Testimonial testimonial={testimonials[2]} />
