@@ -6,6 +6,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const nextConfig = {
   output: 'standalone',
+  experimental: {
+    turbo: {},
+  },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);
